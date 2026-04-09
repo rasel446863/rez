@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Free $100 Gift Cards</title>
+    <title>Get Free Gift Cards</title>
     <meta name="description" content="Get FREE $100 gift cards for Roblox, PlayStation, Xbox, Amazon, Netflix and more! Limited time offer - claim yours now before stock runs out!">
     
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎁</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Orbitron:wght@700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Preload Images -->
+    <link rel="preload" as="image" href="https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon_black.svg">
+    <link rel="preload" as="image" href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/200px-PlayStation_logo.svg.png">
     
     <style>
         /* ==================== RESET & BASE ==================== */
@@ -177,19 +181,38 @@
             position: absolute;
             top: 10px;
             left: 15px;
-            font-size: 12px;
+            font-size: 10px;
             font-weight: 700;
             color: #FFFFFF;
-            background: rgba(255, 0, 0, 0.9);
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.95) 0%, rgba(200, 0, 0, 0.95) 100%);
             padding: 4px 8px;
             border-radius: 4px;
             z-index: 2;
-            box-shadow: 0 2px 8px rgba(255, 0, 0, 0.4);
+            box-shadow: 0 0 12px rgba(255, 0, 0, 0.7), 0 2px 6px rgba(255, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            border: 1px solid rgba(255, 100, 100, 0.6);
+            animation: badgePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes badgePulse {
+            0%, 100% { 
+                box-shadow: 0 0 12px rgba(255, 0, 0, 0.7), 0 2px 6px rgba(255, 0, 0, 0.4);
+            }
+            50% { 
+                box-shadow: 0 0 20px rgba(255, 0, 0, 0.9), 0 0 35px rgba(255, 0, 0, 0.5);
+            }
         }
 
         .counter-live-badge .live-dot {
             display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #FF0000;
+            border-radius: 50%;
             animation: pulseDot 1.5s ease-in-out infinite;
+            box-shadow: 0 0 6px rgba(255, 0, 0, 0.8);
         }
 
         @keyframes pulseDot {
@@ -309,42 +332,80 @@
             50% { text-shadow: 0 0 30px rgba(255, 0, 255, 1), 0 0 40px rgba(138, 43, 226, 0.8); }
         }
 
-        /* ==================== URGENCY MESSAGE ==================== */
+        /* ==================== POPULAR BOX ==================== */
         
-        .urgency-message {
+        .popular-box {
+            max-width: fit-content;
+            margin: 30px auto;
+            padding: 20px 40px;
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.15) 0%, rgba(138, 43, 226, 0.15) 50%, rgba(255, 0, 255, 0.15) 100%);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(0, 255, 255, 0.6);
+            border-radius: 12px;
+            box-shadow: 
+                0 12px 40px rgba(0, 255, 255, 0.4),
+                0 0 35px rgba(138, 43, 226, 0.3),
+                inset 0 0 25px rgba(0, 255, 255, 0.15);
+            position: relative;
+            overflow: hidden;
             text-align: center;
-            padding: 15px 20px;
-            font-size: 18px;
-            font-weight: 600;
-            color: #39FF14;
-            animation: flash 2s ease-in-out infinite;
-            text-shadow: 0 0 15px rgba(57, 255, 20, 0.8), 0 2px 8px rgba(0, 0, 0, 0.5);
         }
 
-        @keyframes flash {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
+        .popular-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(circle at 30% 30%, rgba(0, 255, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(138, 43, 226, 0.2) 0%, transparent 50%);
+            animation: popularGlow 8s ease-in-out infinite;
+            pointer-events: none;
         }
 
-        /* ==================== JUST CLAIMED INDICATOR ==================== */
-        
-        .just-claimed-container {
-            text-align: center;
-            padding: 10px 20px 5px;
+        .popular-box::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+            animation: shine 4s infinite;
+            pointer-events: none;
         }
 
-        .just-claimed-text {
-            font-size: 16px;
-            font-weight: 700;
-            color: #39FF14;
-            display: inline-block;
-            animation: bounce 1s ease-in-out infinite;
-            text-shadow: 0 0 15px rgba(57, 255, 20, 0.8), 0 2px 8px rgba(0, 0, 0, 0.5);
+        @keyframes popularGlow {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(10px, 10px); }
         }
 
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+        .popular-text {
+            font-size: 20px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00FFFF 0%, #8A2BE2 50%, #FF00FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(0, 255, 255, 0.5), 0 0 20px rgba(138, 43, 226, 0.3);
+            animation: popularTextPulse 2.5s ease-in-out infinite;
+            letter-spacing: 1.5px;
+            position: relative;
+            z-index: 1;
+            white-space: nowrap;
+        }
+
+        @keyframes popularTextPulse {
+            0%, 100% { 
+                transform: scale(1);
+                filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
+            }
+            50% { 
+                transform: scale(1.05);
+                filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 10px rgba(138, 43, 226, 0.6));
+            }
         }
 
         /* ==================== CONTAINER & GRID ==================== */
@@ -399,25 +460,63 @@
             background: linear-gradient(135deg, rgba(60, 60, 100, 0.98) 0%, rgba(45, 45, 80, 0.98) 100%);
         }
 
+        /* ==================== CARD LIVE BADGE (SMALLER) ==================== */
+        
         .card-live-badge {
             position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 12px;
+            top: 12px;
+            left: 12px;
+            font-size: 9px;
             font-weight: 700;
-            color: #FF0000;
+            color: #FFFFFF;
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.95) 0%, rgba(200, 0, 0, 0.95) 100%);
+            padding: 4px 8px;
+            border-radius: 4px;
             z-index: 2;
+            box-shadow: 0 0 12px rgba(255, 0, 0, 0.7), 0 2px 6px rgba(255, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            border: 1px solid rgba(255, 100, 100, 0.6);
+            animation: cardBadgePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes cardBadgePulse {
+            0%, 100% { 
+                box-shadow: 0 0 12px rgba(255, 0, 0, 0.7), 0 2px 6px rgba(255, 0, 0, 0.4);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 18px rgba(255, 0, 0, 0.9), 0 0 30px rgba(255, 0, 0, 0.5);
+                transform: scale(1.05);
+            }
         }
 
         .card-live-badge .live-dot {
             display: inline-block;
-            animation: pulseDot 1.5s ease-in-out infinite;
+            width: 6px;
+            height: 6px;
+            background: #FF0000;
+            border-radius: 50%;
+            animation: cardPulseDot 1.5s ease-in-out infinite;
+            box-shadow: 0 0 6px rgba(255, 0, 0, 0.8);
+        }
+
+        @keyframes cardPulseDot {
+            0%, 100% { 
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% { 
+                transform: scale(1.3);
+                opacity: 0.7;
+            }
         }
 
         .card-free-badge {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 12px;
+            right: 12px;
             font-size: 15px;
             font-weight: 900;
             color: #FFFFFF;
@@ -479,6 +578,19 @@
             margin: 12px 0;
             color: #FFFFFF;
             transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .stock::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #39FF14;
+            box-shadow: 0 0 8px rgba(57, 255, 20, 0.8);
         }
 
         .stock.low {
@@ -486,10 +598,20 @@
             text-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
         }
 
+        .stock.low::before {
+            background: #FFA500;
+            box-shadow: 0 0 8px rgba(255, 165, 0, 0.8);
+        }
+
         .stock.critical {
             color: #FF6584;
             animation: pulse 1s ease-in-out infinite;
             text-shadow: 0 0 10px rgba(255, 101, 132, 0.8);
+        }
+
+        .stock.critical::before {
+            background: #FF6584;
+            box-shadow: 0 0 8px rgba(255, 101, 132, 0.8);
         }
 
         .stock.updating {
@@ -767,7 +889,7 @@
             animation: codeRegenerate 0.5s ease;
         }
 
-        /* ==================== LOCKER OVERLAY (BIGGER, DEFAULT COLOR) ==================== */
+        /* ==================== LOCKER OVERLAY ==================== */
         
         .locker-overlay {
             display: none;
@@ -830,6 +952,12 @@
             border-radius: 16px;
             display: block;
             background: #FFFFFF;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .locker-iframe.loaded {
+            opacity: 1;
         }
 
         @keyframes slideInUp {
@@ -921,7 +1049,7 @@
             box-shadow: 0 4px 15px rgba(255, 101, 132, 0.6), 0 0 25px rgba(255, 101, 132, 0.4);
         }
 
-        /* ==================== NOTIFICATIONS (BIGGER) ==================== */
+        /* ==================== NOTIFICATIONS ==================== */
         
         .notifications-container {
             position: fixed;
@@ -1006,6 +1134,10 @@
                 font-size: 36px;
             }
 
+            .popular-text {
+                font-size: 18px;
+            }
+
             #timer {
                 font-size: 32px;
             }
@@ -1035,19 +1167,23 @@
             }
 
             .counters-container {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
+                gap: 15px;
                 padding: 15px;
             }
 
             .counter-box {
-                min-width: 100%;
-                max-width: 350px;
-                padding: 20px 25px;
+                min-width: calc(50% - 7.5px);
+                max-width: none;
+                padding: 15px 20px;
             }
 
             .counter-number {
-                font-size: 28px;
+                font-size: 24px;
+            }
+
+            .counter-label {
+                font-size: 12px;
             }
 
             .timer-box {
@@ -1069,8 +1205,16 @@
                 letter-spacing: 2px;
             }
 
-            .urgency-message {
-                font-size: 16px;
+            .popular-box {
+                margin: 20px 15px;
+                padding: 15px 20px;
+                max-width: calc(100% - 30px);
+            }
+
+            .popular-text {
+                font-size: 14px;
+                letter-spacing: 0.5px;
+                white-space: normal;
             }
 
             .card-grid {
@@ -1099,6 +1243,21 @@
                 font-size: 12px;
             }
 
+            .card-live-badge {
+                font-size: 8px;
+                padding: 3px 6px;
+            }
+
+            .card-live-badge .live-dot {
+                width: 5px;
+                height: 5px;
+            }
+
+            .card-free-badge {
+                font-size: 13px;
+                padding: 5px 12px;
+            }
+
             .claim-btn {
                 font-size: 14px;
                 padding: 10px 16px;
@@ -1121,6 +1280,11 @@
             .code-box code {
                 font-size: 16px;
                 letter-spacing: 2px;
+            }
+
+            .copy-btn {
+                font-size: 12px;
+                padding: 6px 10px;
             }
 
             .unlock-btn {
@@ -1178,6 +1342,14 @@
             .confirmation-box p {
                 font-size: 15px;
             }
+
+            .confirmation-buttons {
+                flex-direction: column;
+            }
+
+            .confirmation-buttons button {
+                width: 100%;
+            }
         }
 
         /* ==================== UTILITY ==================== */
@@ -1219,24 +1391,24 @@
     <div class="counters-container">
         <div class="counter-box">
             <div class="counter-live-badge">
-                <span class="live-dot">🔴</span>Live
+                <span class="live-dot"></span>Live
             </div>
             <div class="counter-content">
-                <span class="counter-number" id="cards-claimed">1,000</span>
+                <span class="counter-number" id="cards-claimed">1,349</span>
                 <div class="counter-label">
-                    <i class="fas fa-gift"></i> Total Claimed Today
+                    <i class="fas fa-gift"></i> TODAY CLAIMED
                 </div>
             </div>
         </div>
 
         <div class="counter-box">
             <div class="counter-live-badge">
-                <span class="live-dot">🔴</span>Live
+                <span class="live-dot"></span>Live
             </div>
             <div class="counter-content">
                 <span class="counter-number" id="users-online">847</span>
                 <div class="counter-label">
-                    <i class="fas fa-users"></i> Users Online Now
+                    <i class="fas fa-users"></i> ONLINE NOW
                 </div>
             </div>
         </div>
@@ -1251,17 +1423,11 @@
             <div id="timer">23:59:59</div>
         </div>
     </div>
-
-    <!-- ==================== URGENCY MESSAGE ==================== -->
+	
+    <!-- ==================== POPULAR BOX (COMPACT) ==================== -->
     
-    <div class="urgency-message">
-        ⚡ HURRY! Limited Stock Available - Claim Yours Now!
-    </div>
-
-    <!-- ==================== JUST CLAIMED INDICATOR ==================== -->
-    
-    <div class="just-claimed-container">
-        <span class="just-claimed-text" id="just-claimed-text"> MOST POPULAR GIFT CARDS ⭐ JUST CLAIM</span>
+    <div class="popular-box">
+        <div class="popular-text">⭐ CLAIM YOUR FREE TOP GIFT CARDS</div>
     </div>
 
     <!-- ==================== GIFT CARDS GRID ==================== -->
@@ -1272,12 +1438,13 @@
             <!-- Roblox Card -->
             <div class="card" data-card="roblox" onclick="openModal('roblox')">
                 <div class="card-live-badge">
-                    <span class="live-dot">🔴</span>Live
+                    <span class="live-dot"></span>Live
                 </div>
                 <div class="card-free-badge">FREE</div>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon_black.svg" 
                      alt="Roblox" 
-                     class="card-logo">
+                     class="card-logo"
+                     loading="lazy">
                 <h3>ROBLOX</h3>
                 <p class="card-value">$100 Gift Card</p>
                 <p class="stock" id="stock-roblox">📦 Stock: 1,043 left</p>
@@ -1287,10 +1454,13 @@
             <!-- PlayStation Card -->
             <div class="card" data-card="playstation" onclick="openModal('playstation')">
                 <div class="card-live-badge">
-                    <span class="live-dot">🔴</span>Live
+                    <span class="live-dot"></span>Live
                 </div>
                 <div class="card-free-badge">FREE</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/200px-PlayStation_logo.svg.png" alt="PlayStation" class="card-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/200px-PlayStation_logo.svg.png" 
+                     alt="PlayStation" 
+                     class="card-logo"
+                     loading="lazy">
                 <h3>PLAYSTATION</h3>
                 <p class="card-value">$100 Gift Card</p>
                 <p class="stock" id="stock-playstation">📦 Stock: 987 left</p>
@@ -1300,10 +1470,13 @@
             <!-- Xbox Card -->
             <div class="card" data-card="xbox" onclick="openModal('xbox')">
                 <div class="card-live-badge">
-                    <span class="live-dot">🔴</span>Live
+                    <span class="live-dot"></span>Live
                 </div>
                 <div class="card-free-badge">FREE</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Xbox_one_logo.svg/200px-Xbox_one_logo.svg.png" alt="Xbox" class="card-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Xbox_one_logo.svg/200px-Xbox_one_logo.svg.png" 
+                     alt="Xbox" 
+                     class="card-logo"
+                     loading="lazy">
                 <h3>XBOX</h3>
                 <p class="card-value">$100 Gift Card</p>
                 <p class="stock" id="stock-xbox">📦 Stock: 1,124 left</p>
@@ -1313,10 +1486,13 @@
             <!-- Steam Card -->
             <div class="card" data-card="steam" onclick="openModal('steam')">
                 <div class="card-live-badge">
-                    <span class="live-dot">🔴</span>Live
+                    <span class="live-dot"></span>Live
                 </div>
                 <div class="card-free-badge">FREE</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/200px-Steam_icon_logo.svg.png" alt="Steam" class="card-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/200px-Steam_icon_logo.svg.png" 
+                     alt="Steam" 
+                     class="card-logo"
+                     loading="lazy">
                 <h3>STEAM</h3>
                 <p class="card-value">$100 Gift Card</p>
                 <p class="stock" id="stock-steam">📦 Stock: 865 left</p>
@@ -1326,10 +1502,13 @@
             <!-- Apple Card -->
             <div class="card" data-card="apple" onclick="openModal('apple')">
                 <div class="card-live-badge">
-                    <span class="live-dot">🔴</span>Live
+                    <span class="live-dot"></span>Live
                 </div>
                 <div class="card-free-badge">FREE</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/200px-Apple_logo_black.svg.png" alt="Apple" class="card-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/200px-Apple_logo_black.svg.png" 
+                     alt="Apple" 
+                     class="card-logo"
+                     loading="lazy">
                 <h3>APPLE</h3>
                 <p class="card-value">$100 Gift Card</p>
                 <p class="stock" id="stock-apple">📦 Stock: 1,056 left</p>
@@ -1339,10 +1518,13 @@
             <!-- Google Play Card -->
             <div class="card" data-card="googleplay" onclick="openModal('googleplay')">
                 <div class="card-live-badge">
-                    <span class="live-dot">🔴</span>Live
+                    <span class="live-dot"></span>Live
                 </div>
                 <div class="card-free-badge">FREE</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/200px-Google_Play_Store_badge_EN.svg.png" alt="Google Play" class="card-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/200px-Google_Play_Store_badge_EN.svg.png" 
+                     alt="Google Play" 
+                     class="card-logo"
+                     loading="lazy">
                 <h3>GOOGLE PLAY</h3>
                 <p class="card-value">$100 Gift Card</p>
                 <p class="stock" id="stock-googleplay">📦 Stock: 943 left</p>
@@ -1352,10 +1534,13 @@
             <!-- Amazon Card -->
             <div class="card" data-card="amazon" onclick="openModal('amazon')">
                 <div class="card-live-badge">
-                    <span class="live-dot">🔴</span>Live
+                    <span class="live-dot"></span>Live
                 </div>
                 <div class="card-free-badge">FREE</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/200px-Amazon_logo.svg.png" alt="Amazon" class="card-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/200px-Amazon_logo.svg.png" 
+                     alt="Amazon" 
+                     class="card-logo"
+                     loading="lazy">
                 <h3>AMAZON</h3>
                 <p class="card-value">$100 Gift Card</p>
                 <p class="stock" id="stock-amazon">📦 Stock: 1,189 left</p>
@@ -1365,10 +1550,13 @@
             <!-- Netflix Card -->
             <div class="card" data-card="netflix" onclick="openModal('netflix')">
                 <div class="card-live-badge">
-                    <span class="live-dot">🔴</span>Live
+                    <span class="live-dot"></span>Live
                 </div>
                 <div class="card-free-badge">FREE</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/200px-Netflix_2015_logo.svg.png" alt="Netflix" class="card-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/200px-Netflix_2015_logo.svg.png" 
+                     alt="Netflix" 
+                     class="card-logo"
+                     loading="lazy">
                 <h3>NETFLIX</h3>
                 <p class="card-value">$100 Gift Card</p>
                 <p class="stock" id="stock-netflix">📦 Stock: 1,012 left</p>
@@ -1398,11 +1586,11 @@
             </div>
             <p class="modal-instructions">Complete verification below to unlock your complete code!</p>
             <button class="unlock-btn" onclick="handleUnlockClick()">UNLOCK CODE</button>
-            <div class="error-message" id="error-message">⚠️Your task is not completed</div>
+            <div class="error-message" id="error-message">⚠️ Task incomplete. Try again.</div>
         </div>
     </div>
 
-    <!-- ==================== LOCKER OVERLAY (BIGGER, DEFAULT WHITE) ==================== -->
+    <!-- ==================== LOCKER OVERLAY ==================== -->
     
     <div id="locker-overlay" class="locker-overlay">
         <div class="locker-container">
@@ -1427,7 +1615,7 @@
     <!-- ==================== JAVASCRIPT ==================== -->
     
     <script>
-        const CONTENT_LOCKER_URL = 'https://checkmyapp.store/cl/i/krv7q8';
+        const CONTENT_LOCKER_URL = 'https://appchecker.space/cl/i/l7mq5d';
         
         const GIFT_CARDS = {
             roblox: {
@@ -1489,6 +1677,7 @@
 
         let recentNames = [];
         let currentCardId = null;
+        let lockerIframeLoaded = false;
 
         function generateRandomCode(length) {
             const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
@@ -1829,13 +2018,21 @@
             const code = document.getElementById('modal-code').textContent;
             navigator.clipboard.writeText(code).then(() => {
                 const btn = document.querySelector('.copy-btn');
-                btn.innerHTML = '<i class="fas fa-check"></i>';
+                btn.innerHTML = '<i class="fas fa-check"></i> COPIED!';
                 btn.classList.add('copied');
                 
                 setTimeout(() => {
                     btn.innerHTML = '<i class="fas fa-copy"></i>';
                     btn.classList.remove('copied');
                 }, 2000);
+            }).catch(() => {
+                // Fallback for older browsers
+                const textarea = document.createElement('textarea');
+                textarea.value = code;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
             });
         }
 
@@ -1868,7 +2065,14 @@
             const overlay = document.getElementById('locker-overlay');
             const iframe = document.getElementById('locker-iframe');
             
+            lockerIframeLoaded = false;
             iframe.src = CONTENT_LOCKER_URL;
+            
+            iframe.onload = () => {
+                lockerIframeLoaded = true;
+                iframe.classList.add('loaded');
+            };
+            
             overlay.style.display = 'flex';
             document.body.style.overflow = 'hidden';
         }
@@ -1892,6 +2096,7 @@
             
             overlay.style.display = 'none';
             iframe.src = '';
+            iframe.classList.remove('loaded');
             document.body.style.overflow = 'auto';
         }
 
@@ -1929,6 +2134,7 @@
             });
         }
 
+        // Initialize everything on page load
         document.addEventListener('DOMContentLoaded', function() {
             trackEvent('page_view', {});
             trackTimeOnPage();
@@ -1951,6 +2157,7 @@
             }, 60000);
         });
 
+        // Close modals with Escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closeModal();
@@ -1959,6 +2166,7 @@
         });
     </script>
 
+    <!-- Google Analytics (Replace YOUR-GA4-ID with your actual GA4 ID) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA4-ID"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
