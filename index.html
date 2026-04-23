@@ -2,726 +2,549 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Free Gift Cards</title>
-    <meta name="description" content="Get FREE $100 gift cards for Roblox, PlayStation, Xbox, Amazon, Netflix and more! Limited time offer - claim yours now before stock runs out!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>GET FREE GIFT CARDS</title>
+    <meta name="description" content="Get FREE gift cards. Choose your favorite brand & claim your free gift card now!">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'></text></svg>">
     
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Orbitron:wght@700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Preload Images -->
-    <link rel="preload" as="image" href="https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon_black.svg">
-    <link rel="preload" as="image" href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/200px-PlayStation_logo.svg.png">
-    
     <style>
-        /* ==================== RESET & BASE ==================== */
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #1a1a3e 0%, #3d3d6b 50%, #2d2d5a 100%);
-            background-attachment: fixed;
-            color: #2D3436;
-            line-height: 1.6;
+            background: radial-gradient(circle at 20% 30%, #0a0c1a 0%, #020308 100%);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            color: #fff;
             overflow-x: hidden;
             position: relative;
         }
 
         body::before {
-            content: '';
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: 
+                repeating-linear-gradient(0deg, rgba(0, 255, 255, 0.025) 0px, rgba(0, 255, 255, 0.025) 1px, transparent 1px, transparent 35px),
+                repeating-linear-gradient(90deg, rgba(255, 0, 255, 0.025) 0px, rgba(255, 0, 255, 0.025) 1px, transparent 1px, transparent 35px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .glow-aura {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(138, 43, 226, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(0, 255, 255, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 40% 20%, rgba(57, 255, 20, 0.15) 0%, transparent 50%);
+            background: radial-gradient(ellipse at 50% 30%, rgba(0, 255, 255, 0.05), transparent 70%);
             pointer-events: none;
             z-index: 0;
-            animation: gradientShift 15s ease infinite;
+            animation: pulseGlow 8s infinite alternate;
         }
 
-        @keyframes gradientShift {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
+        @keyframes pulseGlow {
+            0% { opacity: 0.3; }
+            100% { opacity: 0.7; transform: scale(1.02);}
         }
 
-        body > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        /* ==================== HEADER BOX ==================== */
-        
-        .header {
-            max-width: 1200px;
-            margin: 30px auto 20px;
-            padding: 40px 30px;
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.95) 0%, rgba(75, 0, 130, 0.95) 100%);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            box-shadow: 0 10px 40px rgba(138, 43, 226, 0.5), 0 0 30px rgba(0, 255, 255, 0.3);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            border: 2px solid rgba(0, 255, 255, 0.3);
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(0, 255, 255, 0.2) 0%, transparent 70%);
-            animation: headerGlow 8s ease-in-out infinite;
-        }
-
-        @keyframes headerGlow {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(-20px, -20px); }
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .header h1 {
-            font-size: 42px;
-            font-weight: 800;
-            color: #FFFFFF;
-            margin-bottom: 15px;
-            line-height: 1.2;
-            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 2px 10px rgba(0,0,0,0.3);
-            animation: slideDown 0.6s ease;
-        }
-
-        .subheadline {
-            font-size: 20px;
-            color: rgba(0, 255, 255, 0.95);
-            font-weight: 500;
-            text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
-            animation: slideDown 0.8s ease;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* ==================== COUNTERS (GAMING CYAN) ==================== */
-        
-        .counters-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-            flex-wrap: wrap;
-            max-width: 1200px;
+        .wrapper {
+            max-width: 1400px;
             margin: 0 auto;
-        }
-
-        .counter-box {
-            background: linear-gradient(135deg, rgba(0, 255, 255, 0.2) 0%, rgba(138, 43, 226, 0.2) 100%);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(0, 255, 255, 0.5);
-            border-radius: 12px;
-            padding: 25px 35px;
-            min-width: 280px;
-            box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3), inset 0 0 20px rgba(0, 255, 255, 0.1);
+            padding: 20px 16px 40px;
             position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .counter-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.3), transparent);
-            animation: shine 3s infinite;
-        }
-
-        @keyframes shine {
-            0% { left: -100%; }
-            50%, 100% { left: 100%; }
-        }
-
-        .counter-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(0, 255, 255, 0.5), 0 0 40px rgba(138, 43, 226, 0.3);
-            border-color: rgba(57, 255, 20, 0.7);
-        }
-
-        .counter-live-badge {
-            position: absolute;
-            top: 10px;
-            left: 15px;
-            font-size: 10px;
-            font-weight: 700;
-            color: #FFFFFF;
-            background: linear-gradient(135deg, rgba(255, 0, 0, 0.95) 0%, rgba(200, 0, 0, 0.95) 100%);
-            padding: 4px 8px;
-            border-radius: 4px;
             z-index: 2;
-            box-shadow: 0 0 12px rgba(255, 0, 0, 0.7), 0 2px 6px rgba(255, 0, 0, 0.4);
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            border: 1px solid rgba(255, 100, 100, 0.6);
-            animation: badgePulse 2s ease-in-out infinite;
         }
 
-        @keyframes badgePulse {
-            0%, 100% { 
-                box-shadow: 0 0 12px rgba(255, 0, 0, 0.7), 0 2px 6px rgba(255, 0, 0, 0.4);
-            }
-            50% { 
-                box-shadow: 0 0 20px rgba(255, 0, 0, 0.9), 0 0 35px rgba(255, 0, 0, 0.5);
+        @media (min-width: 768px) {
+            .wrapper {
+                padding: 30px 24px 60px;
             }
         }
 
-        .counter-live-badge .live-dot {
-            display: inline-block;
-            width: 6px;
-            height: 6px;
-            background: #FF0000;
-            border-radius: 50%;
-            animation: pulseDot 1.5s ease-in-out infinite;
-            box-shadow: 0 0 6px rgba(255, 0, 0, 0.8);
-        }
-
-        @keyframes pulseDot {
-            0%, 100% { 
-                transform: scale(1);
-                opacity: 1;
-            }
-            50% { 
-                transform: scale(1.3);
-                opacity: 0.7;
-            }
-        }
-
-        .counter-content {
+        /* HEADER */
+        .arena-header {
             text-align: center;
-            margin-top: 10px;
-            position: relative;
-            z-index: 1;
+            margin-bottom: 28px;
         }
 
-        .counter-number {
-            font-size: 36px;
-            font-weight: 700;
-            color: #00FFFF;
-            display: block;
-            margin: 5px 0;
-            text-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 0 2px 10px rgba(0,0,0,0.3);
+        @media (min-width: 768px) {
+            .arena-header {
+                margin-bottom: 40px;
+            }
+        }
+
+        .glitch-title {
+            font-size: 1.8rem;
+            font-weight: 900;
             font-family: 'Orbitron', monospace;
+            background: linear-gradient(135deg, #00FFFF, #FF00FF, #8A2BE2, #39FF14);
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: textFlow 3s linear infinite;
+            text-shadow: 0 0 20px rgba(0,255,255,0.3);
+            letter-spacing: 1px;
         }
 
-        .counter-label {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.95);
+        @media (min-width: 768px) {
+            .glitch-title {
+                font-size: 3rem;
+                letter-spacing: 2px;
+            }
+        }
+
+        @keyframes textFlow {
+            0% { background-position: 0% 50%;}
+            100% { background-position: 200% 50%;}
+        }
+
+        .sub-arena {
+            font-size: 0.85rem;
+            color: #b8bbff;
+            margin-top: 8px;
+            padding: 0 10px;
+        }
+
+        @media (min-width: 768px) {
+            .sub-arena {
+                font-size: 1.1rem;
+                margin-top: 12px;
+            }
+        }
+
+        /* STAT PANELS */
+        .stat-panel {
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+            margin-bottom: 28px;
+            justify-content: center;
+        }
+
+        .stat-card {
+            background: rgba(8, 10, 24, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1.5px solid rgba(0, 255, 255, 0.4);
+            border-radius: 20px;
+            padding: 12px 12px;
+            text-align: center;
+            flex: 1;
+            box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1);
+            transition: 0.2s;
+        }
+
+        @media (min-width: 640px) {
+            .stat-card {
+                min-width: 220px;
+                padding: 16px 24px;
+            }
+        }
+
+        .stat-card:hover {
+            border-color: #39FF14;
+            box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .stat-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #ff2e5d20;
+            padding: 3px 10px;
+            border-radius: 60px;
+            font-size: 0.6rem;
+            font-weight: bold;
+            color: #ff6b8a;
+            border: 1px solid #ff6b8a;
+            margin-bottom: 6px;
+        }
+
+        @media (min-width: 768px) {
+            .stat-badge {
+                font-size: 0.7rem;
+                padding: 4px 12px;
+                margin-bottom: 8px;
+            }
+        }
+
+        .stat-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #0ff;
+            text-shadow: 0 0 10px cyan;
+        }
+
+        @media (min-width: 768px) {
+            .stat-number {
+                font-size: 2.8rem;
+            }
+        }
+
+        .stat-label {
             font-weight: 600;
+            font-size: 0.65rem;
+            color: #ccd6f6;
         }
 
-        .counter-label i {
-            margin-right: 5px;
-            color: #39FF14;
+        @media (min-width: 768px) {
+            .stat-label {
+                font-size: 0.85rem;
+            }
         }
 
-        /* ==================== COUNTDOWN TIMER ==================== */
-        
-        .timer-container {
+        /* TIMER */
+        .timer-zone {
             display: flex;
             justify-content: center;
-            padding: 20px;
-            background-color: transparent;
+            margin-bottom: 25px;
         }
 
-        .timer-box {
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.3) 0%, rgba(255, 0, 255, 0.3) 100%);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 0, 255, 0.5);
-            border-radius: 12px;
-            padding: 20px 40px;
-            box-shadow: 0 8px 25px rgba(255, 0, 255, 0.4), inset 0 0 20px rgba(138, 43, 226, 0.2);
-            text-align: center;
-            max-width: 450px;
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
+        .timer-core {
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(12px);
+            border: 2px solid #FF00FF;
+            border-radius: 50px;
+            padding: 10px 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
         }
 
-        .timer-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 0, 255, 0.3), transparent);
-            animation: shine 3s infinite;
+        @media (min-width: 768px) {
+            .timer-core {
+                padding: 12px 35px;
+                gap: 18px;
+            }
         }
 
-        .timer-box:hover {
-            transform: scale(1.02);
-            box-shadow: 0 12px 35px rgba(255, 0, 255, 0.6), 0 0 40px rgba(138, 43, 226, 0.4);
+        .timer-core i {
+            font-size: 1.3rem;
+            color: #ff66ff;
         }
 
-        .timer-box i {
-            color: #FF00FF;
-            font-size: 28px;
-            margin-right: 10px;
-            animation: tickTock 1s ease-in-out infinite;
-            filter: drop-shadow(0 0 10px rgba(255, 0, 255, 0.8));
-        }
-
-        @keyframes tickTock {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(-10deg); }
-            75% { transform: rotate(10deg); }
+        @media (min-width: 768px) {
+            .timer-core i {
+                font-size: 2rem;
+            }
         }
 
         .timer-label {
-            color: #FFFFFF;
             font-weight: 700;
-            font-size: 18px;
-            margin-right: 10px;
-            text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+            font-size: 0.8rem;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .timer-label {
+                font-size: 1.2rem;
+            }
         }
 
         #timer {
             font-family: 'Orbitron', monospace;
-            font-size: 36px;
-            font-weight: 700;
-            color: #FF00FF;
-            letter-spacing: 3px;
-            text-shadow: 0 0 20px rgba(255, 0, 255, 0.8), 0 3px 10px rgba(0,0,0,0.3);
-            display: inline-block;
-            animation: timerGlow 2s ease-in-out infinite;
-        }
-
-        @keyframes timerGlow {
-            0%, 100% { text-shadow: 0 0 20px rgba(255, 0, 255, 0.8); }
-            50% { text-shadow: 0 0 30px rgba(255, 0, 255, 1), 0 0 40px rgba(138, 43, 226, 0.8); }
-        }
-
-        /* ==================== POPULAR BOX ==================== */
-        
-        .popular-box {
-            max-width: fit-content;
-            margin: 30px auto;
-            padding: 20px 40px;
-            background: linear-gradient(135deg, rgba(0, 255, 255, 0.15) 0%, rgba(138, 43, 226, 0.15) 50%, rgba(255, 0, 255, 0.15) 100%);
-            backdrop-filter: blur(15px);
-            border: 2px solid rgba(0, 255, 255, 0.6);
-            border-radius: 12px;
-            box-shadow: 
-                0 12px 40px rgba(0, 255, 255, 0.4),
-                0 0 35px rgba(138, 43, 226, 0.3),
-                inset 0 0 25px rgba(0, 255, 255, 0.15);
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .popular-box::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: 
-                radial-gradient(circle at 30% 30%, rgba(0, 255, 255, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 70% 70%, rgba(138, 43, 226, 0.2) 0%, transparent 50%);
-            animation: popularGlow 8s ease-in-out infinite;
-            pointer-events: none;
-        }
-
-        .popular-box::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
-            animation: shine 4s infinite;
-            pointer-events: none;
-        }
-
-        @keyframes popularGlow {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(10px, 10px); }
-        }
-
-        .popular-text {
-            font-size: 20px;
+            font-size: 1.3rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #00FFFF 0%, #8A2BE2 50%, #FF00FF 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 0 30px rgba(0, 255, 255, 0.5), 0 0 20px rgba(138, 43, 226, 0.3);
-            animation: popularTextPulse 2.5s ease-in-out infinite;
-            letter-spacing: 1.5px;
-            position: relative;
-            z-index: 1;
-            white-space: nowrap;
+            color: #FF44FF;
+            text-shadow: 0 0 8px #f0f;
+            letter-spacing: 2px;
         }
 
-        @keyframes popularTextPulse {
-            0%, 100% { 
-                transform: scale(1);
-                filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
-            }
-            50% { 
-                transform: scale(1.05);
-                filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 10px rgba(138, 43, 226, 0.6));
+        @media (min-width: 768px) {
+            #timer {
+                font-size: 2.3rem;
+                letter-spacing: 4px;
             }
         }
 
-        /* ==================== CONTAINER & GRID ==================== */
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px 20px 40px;
+        .hotzone {
+            text-align: center;
+            margin: 15px 0 25px;
+        }
+        .hot-pill {
+            background: linear-gradient(95deg, #ffaa0020, #ffcc0040);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            backdrop-filter: blur(4px);
+            border: 1px solid #ffdd44;
+            color: #FFE484;
         }
 
+        @media (min-width: 768px) {
+            .hot-pill {
+                padding: 10px 32px;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* CARD GRID */
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            margin-top: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin: 30px 0 30px;
         }
 
-        /* ==================== GIFT CARDS ==================== */
-        
-        .card {
-            background: linear-gradient(135deg, rgba(50, 50, 90, 0.95) 0%, rgba(35, 35, 70, 0.95) 100%);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(138, 43, 226, 0.5);
-            border-radius: 12px;
-            padding: 24px;
+        @media (min-width: 550px) and (max-width: 899px) {
+            .card-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 18px;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .card-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 24px;
+                margin: 40px 0 30px;
+            }
+        }
+
+        .gaming-card {
+            background: rgba(8, 10, 24, 0.88);
+            backdrop-filter: blur(8px);
+            border: 1.5px solid rgba(138, 43, 226, 0.6);
+            border-radius: 20px;
+            padding: 16px 12px;
             text-align: center;
+            transition: all 0.2s ease;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(138, 43, 226, 0.1);
             position: relative;
         }
 
-        .card.just-claimed {
-            border-color: #39FF14;
-            box-shadow: 0 4px 16px rgba(57, 255, 20, 0.5), 0 0 30px rgba(57, 255, 20, 0.3);
-            animation: highlightPulse 2s ease-in-out infinite;
-        }
-
-        @keyframes highlightPulse {
-            0%, 100% { 
-                box-shadow: 0 4px 16px rgba(57, 255, 20, 0.5), 0 0 30px rgba(57, 255, 20, 0.3);
-            }
-            50% { 
-                box-shadow: 0 6px 20px rgba(57, 255, 20, 0.7), 0 0 40px rgba(57, 255, 20, 0.5);
+        @media (min-width: 768px) {
+            .gaming-card {
+                padding: 22px 16px;
+                border-radius: 28px;
             }
         }
 
-        .card:hover {
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 12px 30px rgba(0, 255, 255, 0.5), 0 0 40px rgba(138, 43, 226, 0.4);
-            border-color: #00FFFF;
-            background: linear-gradient(135deg, rgba(60, 60, 100, 0.98) 0%, rgba(45, 45, 80, 0.98) 100%);
+        .gaming-card:active {
+            transform: scale(0.98);
         }
 
-        /* ==================== CARD LIVE BADGE (SMALLER) ==================== */
-        
-        .card-live-badge {
+        @media (hover: hover) {
+            .gaming-card:hover {
+                transform: translateY(-6px) scale(1.02);
+                border-color: #0ff;
+                box-shadow: 0 0 25px rgba(0,255,255,0.4);
+            }
+        }
+
+        .live-tag {
             position: absolute;
-            top: 12px;
-            left: 12px;
-            font-size: 9px;
-            font-weight: 700;
-            color: #FFFFFF;
-            background: linear-gradient(135deg, rgba(255, 0, 0, 0.95) 0%, rgba(200, 0, 0, 0.95) 100%);
-            padding: 4px 8px;
-            border-radius: 4px;
-            z-index: 2;
-            box-shadow: 0 0 12px rgba(255, 0, 0, 0.7), 0 2px 6px rgba(255, 0, 0, 0.4);
+            top: 8px;
+            left: 10px;
+            background: #ff0040;
+            font-size: 0.55rem;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             gap: 4px;
-            border: 1px solid rgba(255, 100, 100, 0.6);
-            animation: cardBadgePulse 2s ease-in-out infinite;
+            box-shadow: 0 0 8px red;
         }
 
-        @keyframes cardBadgePulse {
-            0%, 100% { 
-                box-shadow: 0 0 12px rgba(255, 0, 0, 0.7), 0 2px 6px rgba(255, 0, 0, 0.4);
-                transform: scale(1);
-            }
-            50% { 
-                box-shadow: 0 0 18px rgba(255, 0, 0, 0.9), 0 0 30px rgba(255, 0, 0, 0.5);
-                transform: scale(1.05);
+        @media (min-width: 768px) {
+            .live-tag {
+                top: 12px;
+                left: 14px;
+                font-size: 0.65rem;
+                padding: 2px 10px;
             }
         }
 
-        .card-live-badge .live-dot {
-            display: inline-block;
-            width: 6px;
-            height: 6px;
-            background: #FF0000;
-            border-radius: 50%;
-            animation: cardPulseDot 1.5s ease-in-out infinite;
-            box-shadow: 0 0 6px rgba(255, 0, 0, 0.8);
-        }
-
-        @keyframes cardPulseDot {
-            0%, 100% { 
-                transform: scale(1);
-                opacity: 1;
-            }
-            50% { 
-                transform: scale(1.3);
-                opacity: 0.7;
-            }
-        }
-
-        .card-free-badge {
+        .free-tag {
             position: absolute;
-            top: 12px;
-            right: 12px;
-            font-size: 15px;
-            font-weight: 900;
-            color: #FFFFFF;
-            background: linear-gradient(135deg, #8A2BE2 0%, #FF00FF 100%);
-            padding: 6px 16px;
-            border-radius: 6px;
-            box-shadow: 0 4px 12px rgba(138, 43, 226, 0.7), 0 0 20px rgba(255, 0, 255, 0.5);
-            animation: pulseFreeBadge 1.5s ease-in-out infinite;
-            z-index: 2;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 2px 5px rgba(0, 0, 0, 0.5);
-            letter-spacing: 1px;
+            top: 8px;
+            right: 10px;
+            background: linear-gradient(135deg, #8A2BE2, #FF00FF);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 0.65rem;
         }
 
-        @keyframes pulseFreeBadge {
-            0%, 100% { 
-                transform: scale(1);
-                box-shadow: 0 4px 12px rgba(138, 43, 226, 0.7), 0 0 20px rgba(255, 0, 255, 0.5);
-            }
-            50% { 
-                transform: scale(1.1);
-                box-shadow: 0 6px 16px rgba(138, 43, 226, 0.9), 0 0 30px rgba(255, 0, 255, 0.8);
+        @media (min-width: 768px) {
+            .free-tag {
+                top: 12px;
+                right: 14px;
+                padding: 4px 14px;
+                font-size: 0.8rem;
             }
         }
 
         .card-logo {
-            width: 80px;
-            height: 80px;
+            width: 50px;
+            height: 50px;
             object-fit: contain;
-            margin: 20px auto 16px;
-            display: block;
-            transition: transform 0.3s ease;
-            filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.3));
+            margin: 18px auto 10px;
+            filter: drop-shadow(0 0 6px cyan);
         }
 
-        .card:hover .card-logo {
-            transform: scale(1.1) rotate(5deg);
-            filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.6));
-        }
-
-        .card h3 {
-            font-size: 20px;
-            font-weight: 700;
-            color: #FFFFFF;
-            margin-bottom: 8px;
-            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-        }
-
-        .card-value {
-            font-size: 16px;
-            color: #00FFFF;
-            font-weight: 600;
-            margin-bottom: 12px;
-            text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
-        }
-
-        .stock {
-            font-size: 14px;
-            font-weight: 600;
-            margin: 12px 0;
-            color: #FFFFFF;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-        }
-
-        .stock::before {
-            content: '';
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #39FF14;
-            box-shadow: 0 0 8px rgba(57, 255, 20, 0.8);
-        }
-
-        .stock.low {
-            color: #FFA500;
-            text-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
-        }
-
-        .stock.low::before {
-            background: #FFA500;
-            box-shadow: 0 0 8px rgba(255, 165, 0, 0.8);
-        }
-
-        .stock.critical {
-            color: #FF6584;
-            animation: pulse 1s ease-in-out infinite;
-            text-shadow: 0 0 10px rgba(255, 101, 132, 0.8);
-        }
-
-        .stock.critical::before {
-            background: #FF6584;
-            box-shadow: 0 0 8px rgba(255, 101, 132, 0.8);
-        }
-
-        .stock.updating {
-            animation: flashStock 0.5s ease;
-        }
-
-        @keyframes flashStock {
-            0%, 100% { background-color: transparent; }
-            50% { 
-                background-color: rgba(0, 255, 255, 0.2);
-                transform: scale(1.05);
+        @media (min-width: 768px) {
+            .card-logo {
+                width: 70px;
+                height: 70px;
+                margin: 22px auto 14px;
             }
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        .card-title {
+            font-size: 0.9rem;
+            font-weight: 800;
+            margin-bottom: 6px;
         }
 
-        .claim-btn {
+        @media (min-width: 768px) {
+            .card-title {
+                font-size: 1.2rem;
+                margin-bottom: 8px;
+            }
+        }
+
+        /* BOLD TEXT WITH SPACING - exactly as requested */
+        .card-amount {
+            font-weight: 900;
+            font-size: 1.2rem;
+            color: #0ff;
+            text-shadow: 0 0 8px cyan;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        .card-sub {
+            font-weight: 700;
+            font-size: 0.7rem;
+            color: #ffdd88;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+        @media (min-width: 768px) {
+            .card-amount {
+                font-size: 1.4rem;
+                margin-bottom: 6px;
+            }
+            .card-sub {
+                font-size: 0.8rem;
+                margin-bottom: 8px;
+            }
+        }
+
+        /* Stock indicator - bold text with "Stock: X left" format */
+        .stock-indicator {
+            margin: 10px 0 8px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            background: rgba(0,255,255,0.12);
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 30px;
+            letter-spacing: 0.3px;
+        }
+
+        @media (min-width: 768px) {
+            .stock-indicator {
+                margin: 14px 0 10px;
+                font-size: 0.85rem;
+                padding: 6px 18px;
+            }
+        }
+
+        .stock-critical {
+            color: #ff4d4d;
+            animation: pulseRed 0.9s infinite;
+            font-weight: 900;
+        }
+        .stock-low {
+            color: #ffaa33;
+            font-weight: 800;
+        }
+        @keyframes pulseRed {
+            0% { text-shadow: 0 0 0px red; }
+            50% { text-shadow: 0 0 6px red; }
+        }
+
+        .claim-btn-card {
+            background: linear-gradient(95deg, #6b21e5, #c026d3);
+            border: none;
             width: 100%;
-            background: linear-gradient(135deg, #8A2BE2 0%, #4B0082 100%);
-            color: #FFFFFF;
-            border: 2px solid rgba(138, 43, 226, 0.5);
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
+            padding: 8px;
+            border-radius: 30px;
+            font-weight: 700;
+            color: white;
+            margin-top: 8px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 12px;
-            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.5), inset 0 0 10px rgba(138, 43, 226, 0.2);
-            position: relative;
-            overflow: hidden;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            font-size: 0.7rem;
         }
 
-        .claim-btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(0, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
+        @media (min-width: 768px) {
+            .claim-btn-card {
+                padding: 12px;
+                margin-top: 12px;
+                font-size: 0.9rem;
+            }
         }
 
-        .claim-btn:hover::before {
-            width: 300px;
-            height: 300px;
+        .claim-btn-card:active {
+            transform: scale(0.97);
         }
 
-        .claim-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(138, 43, 226, 0.7), 0 0 30px rgba(0, 255, 255, 0.5);
-            border-color: #00FFFF;
-        }
-
-        /* ==================== MODAL POPUP ==================== */
-        
-        .modal {
+        /* MODAL */
+        .modal-overlay {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 10000;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.96);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
             align-items: center;
             justify-content: center;
-            animation: fadeIn 0.3s ease;
+            padding: 16px;
         }
-
-        .modal-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .modal-card {
+            background: #0a0c1cee;
+            border: 2px solid #0ff;
+            border-radius: 28px;
+            max-width: 450px;
             width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(8px);
-        }
-
-        .modal-content {
-            position: relative;
-            background: linear-gradient(135deg, rgba(30, 30, 60, 0.98) 0%, rgba(20, 20, 40, 0.98) 100%);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(138, 43, 226, 0.6);
-            border-radius: 16px;
-            padding: 32px;
-            max-width: 500px;
-            width: 90%;
-            max-height: 90vh;
-            overflow-y: auto;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(138, 43, 226, 0.4);
+            padding: 24px 20px;
             text-align: center;
-            animation: scaleIn 0.3s ease;
+            position: relative;
         }
 
-        .close-btn {
+        @media (min-width: 768px) {
+            .modal-card {
+                padding: 32px;
+                max-width: 500px;
+            }
+        }
+
+        .close-modal {
             position: absolute;
-            top: 16px;
             right: 16px;
+            top: 12px;
             font-size: 24px;
-            color: #999;
             cursor: pointer;
-            transition: all 0.3s ease;
             width: 32px;
             height: 32px;
             display: flex;
@@ -729,1451 +552,560 @@
             justify-content: center;
             border-radius: 50%;
         }
-
-        .close-btn:hover {
-            color: #FFFFFF;
-            background: #FF6584;
-            transform: rotate(90deg);
-        }
-
-        .modal-logo {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-            margin: 0 auto 20px;
-            display: block;
-            animation: float 3s ease-in-out infinite;
-            filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.5));
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .modal-content h2 {
-            font-size: 24px;
-            font-weight: 700;
-            color: #FFFFFF;
-            margin-bottom: 20px;
-            text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
-        }
-
         .code-box {
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(0, 255, 255, 0.2) 100%);
-            border: 2px dashed #8A2BE2;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-            position: relative;
-            box-shadow: inset 0 0 20px rgba(138, 43, 226, 0.3);
+            background: #00000055;
+            border: 2px dashed #0ff;
+            padding: 12px;
+            border-radius: 20px;
+            margin: 18px 0;
+            word-break: break-all;
         }
-
-        .code-box code {
-            font-family: 'Courier New', monospace;
-            font-size: 22px;
-            letter-spacing: 3px;
-            color: #00FFFF;
-            font-weight: 600;
-            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-        }
-
-        .copy-btn {
-            position: absolute;
-            top: 50%;
-            right: 15px;
-            transform: translateY(-50%);
-            background: linear-gradient(135deg, #8A2BE2 0%, #4B0082 100%);
-            color: #FFFFFF;
-            border: 2px solid rgba(138, 43, 226, 0.5);
-            padding: 8px 12px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(138, 43, 226, 0.5);
-        }
-
-        .copy-btn:hover {
-            transform: translateY(-50%) scale(1.1);
-            box-shadow: 0 4px 12px rgba(138, 43, 226, 0.7), 0 0 20px rgba(0, 255, 255, 0.4);
-        }
-
-        .copy-btn.copied {
-            background: linear-gradient(135deg, #39FF14 0%, #00D900 100%);
-        }
-
-        .modal-instructions {
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.8);
-            margin: 20px 0;
-            line-height: 1.5;
-        }
-
-        .unlock-btn {
-            width: 80%;
-            max-width: 300px;
-            background: linear-gradient(135deg, #8A2BE2 0%, #4B0082 100%);
-            color: #FFFFFF;
-            border: 2px solid rgba(138, 43, 226, 0.5);
-            padding: 14px 28px;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin: 0 auto;
-            display: block;
-            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.5), inset 0 0 10px rgba(138, 43, 226, 0.2);
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-        }
-
-        .unlock-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(138, 43, 226, 0.7), 0 0 30px rgba(0, 255, 255, 0.5);
-            border-color: #00FFFF;
-        }
-
-        .error-message {
-            color: #FFFFFF;
-            background: linear-gradient(135deg, rgba(255, 69, 0, 0.9) 0%, rgba(220, 20, 60, 0.9) 100%);
-            font-weight: 700;
-            font-size: 13px;
-            text-align: center;
-            padding: 8px 14px;
-            border: 2px solid #FF4500;
-            border-radius: 6px;
-            margin: 16px auto 0;
-            display: none;
-            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.5), inset 0 0 20px rgba(220, 20, 60, 0.3);
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-            width: fit-content;
-        }
-
-        .error-message.show {
-            display: inline-block;
-            animation: shakeError 0.5s ease;
-        }
-
-        .error-message.permanent {
-            animation: shakeErrorPermanent 2s ease infinite;
-        }
-
-        @keyframes shakeError {
-            0%, 100% { transform: translateX(0); }
-            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-            20%, 40%, 60%, 80% { transform: translateX(5px); }
-        }
-
-        @keyframes shakeErrorPermanent {
-            0%, 100% { transform: translateX(0); }
-            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-            20%, 40%, 60%, 80% { transform: translateX(5px); }
-        }
-
-        /* ==================== CODE REGENERATE ANIMATION ==================== */
-        
-        @keyframes codeRegenerate {
-            0%, 100% { 
-                transform: scale(1);
-                filter: blur(0);
-            }
-            50% { 
-                transform: scale(0.95);
-                filter: blur(2px);
-                opacity: 0.7;
+        @media (min-width: 768px) {
+            .code-box {
+                padding: 18px;
+                margin: 20px 0;
             }
         }
-
-        .code-box.regenerating code {
-            animation: codeRegenerate 0.5s ease;
-        }
-
-        /* ==================== LOCKER OVERLAY ==================== */
-        
-        .locker-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            z-index: 15000;
-            align-items: center;
-            justify-content: center;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .locker-container {
-            position: relative;
-            width: 95%;
-            max-width: 900px;
-            height: auto;
-            max-height: 95vh;
-            background: #FFFFFF;
-            border-radius: 16px;
-            animation: slideInUp 0.4s ease;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
-        }
-
-        .locker-close-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
-            color: #FFFFFF;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            font-size: 22px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            z-index: 10;
+        .gift-code-text {
+            font-family: monospace;
+            font-size: 1rem;
+            letter-spacing: 1px;
             font-weight: bold;
+            color: #0ff;
         }
-
-        .locker-close-btn:hover {
-            background: #FF6584;
-            border-color: #FF6584;
-            transform: rotate(90deg) scale(1.1);
+        @media (min-width: 768px) {
+            .gift-code-text {
+                font-size: 1.4rem;
+                letter-spacing: 2px;
+            }
         }
-
-        .locker-iframe {
-            width: 100%;
-            height: 85vh;
+        .unlock-action {
+            background: #ff00aa;
             border: none;
-            border-radius: 16px;
-            display: block;
-            background: #FFFFFF;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin: 8px;
+            font-size: 0.9rem;
         }
-
-        .locker-iframe.loaded {
-            opacity: 1;
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px) scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
+        @media (min-width: 768px) {
+            .unlock-action {
+                padding: 14px 30px;
+                font-size: 1rem;
             }
         }
+        .error-badge {
+            background: #ff2e00;
+            margin-top: 12px;
+            padding: 8px;
+            border-radius: 40px;
+            display: none;
+            font-size: 0.75rem;
+        }
 
-        /* ==================== CLOSE CONFIRMATION ==================== */
-        
-        .confirmation-modal {
+        /* LOCKER */
+        .locker-frame {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
+            top:0;left:0;
+            width:100%;height:100%;
+            background:#000000dd;
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+        }
+        .locker-frame.active { display: flex; }
+        .iframe-container {
+            background: #fff;
             width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 20000;
+            max-width: 550px;
+            height: 70vh;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        @media (min-width: 768px) {
+            .iframe-container {
+                max-width: 700px;
+                height: 80vh;
+                border-radius: 24px;
+            }
+        }
+        .iframe-container iframe { width: 100%; height: 100%; border: none; }
+        .locker-close {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            background: black;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 30px;
+            font-size: 22px;
+            text-align: center;
+            cursor: pointer;
+            display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .confirmation-box {
-            background: linear-gradient(135deg, rgba(40, 40, 80, 0.98) 0%, rgba(30, 30, 60, 0.98) 100%);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(138, 43, 226, 0.6);
-            border-radius: 12px;
-            padding: 35px;
-            max-width: 450px;
-            width: 90%;
-            text-align: center;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8), 0 0 40px rgba(138, 43, 226, 0.4);
-        }
-
-        .confirmation-box h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: #FFFFFF;
-            text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-        }
-
-        .confirmation-box p {
-            font-size: 17px;
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 30px;
-            line-height: 1.5;
-        }
-
-        .confirmation-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-        }
-
-        .confirmation-buttons button {
-            padding: 14px 28px;
-            border: 2px solid rgba(138, 43, 226, 0.5);
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .btn-cancel {
-            background: linear-gradient(135deg, rgba(50, 50, 80, 0.9) 0%, rgba(30, 30, 60, 0.9) 100%);
-            color: #FFFFFF;
-        }
-
-        .btn-cancel:hover {
-            background: linear-gradient(135deg, #8A2BE2 0%, #4B0082 100%);
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.5);
-        }
-
-        .btn-confirm {
-            background: linear-gradient(135deg, #FF6584 0%, #f5576c 100%);
-            color: #FFFFFF;
-        }
-
-        .btn-confirm:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(255, 101, 132, 0.6), 0 0 25px rgba(255, 101, 132, 0.4);
-        }
-
-        /* ==================== NOTIFICATIONS ==================== */
-        
-        .notifications-container {
+        /* NOTIFICATIONS */
+        .notif-stack {
             position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 9999;
+            bottom: 12px;
+            left: 12px;
+            right: 12px;
+            z-index: 1100;
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            max-width: 400px;
+            gap: 8px;
+            pointer-events: none;
         }
 
-        .notification {
-            background: linear-gradient(135deg, rgba(30, 30, 60, 0.95) 0%, rgba(20, 20, 40, 0.95) 100%);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(57, 255, 20, 0.5);
+        @media (min-width: 768px) {
+            .notif-stack {
+                bottom: 20px;
+                right: 20px;
+                left: auto;
+                max-width: 380px;
+            }
+        }
+
+        .notif {
+            background: rgba(10, 15, 42, 0.95);
+            backdrop-filter: blur(12px);
             border-left: 5px solid #39FF14;
-            border-radius: 10px;
-            padding: 16px 20px;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5), 0 0 25px rgba(57, 255, 20, 0.3);
-            font-size: 16px;
+            padding: 10px 14px;
+            border-radius: 14px;
             font-weight: 500;
-            color: #FFFFFF;
-            animation: slideInRight 0.5s ease;
-            opacity: 1;
-            transition: opacity 0.5s ease;
-            min-height: 60px;
-            display: flex;
-            align-items: center;
+            animation: slideRight 0.3s ease;
+            font-size: 0.75rem;
+            pointer-events: auto;
         }
 
-        .notification i {
-            color: #39FF14;
-            margin-right: 12px;
-            font-size: 20px;
-            filter: drop-shadow(0 0 8px rgba(57, 255, 20, 0.8));
-        }
-
-        @keyframes slideInRight {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        /* ==================== CONFETTI ==================== */
-        
-        .confetti {
-            position: fixed;
-            width: 10px;
-            height: 10px;
-            background: #8A2BE2;
-            position: absolute;
-            animation: confettiFall 2s linear forwards;
-            z-index: 9998;
-        }
-
-        @keyframes confettiFall {
-            to {
-                transform: translateY(100vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        /* ==================== RESPONSIVE DESIGN ==================== */
-        
-        /* Tablet */
-        @media (max-width: 1199px) and (min-width: 768px) {
-            .card-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .header {
-                margin: 20px;
-            }
-
-            .header h1 {
-                font-size: 36px;
-            }
-
-            .popular-text {
-                font-size: 18px;
-            }
-
-            #timer {
-                font-size: 32px;
-            }
-
-            .locker-container {
-                max-width: 750px;
-            }
-        }
-
-        /* Mobile */
-        @media (max-width: 767px) {
-            body {
-                background-size: cover;
-            }
-
-            .header {
-                margin: 15px;
-                padding: 25px 20px;
-            }
-
-            .header h1 {
-                font-size: 22px;
-            }
-
-            .subheadline {
-                font-size: 16px;
-            }
-
-            .counters-container {
-                flex-direction: row;
-                gap: 15px;
-                padding: 15px;
-            }
-
-            .counter-box {
-                min-width: calc(50% - 7.5px);
-                max-width: none;
-                padding: 15px 20px;
-            }
-
-            .counter-number {
-                font-size: 24px;
-            }
-
-            .counter-label {
-                font-size: 12px;
-            }
-
-            .timer-box {
-                padding: 15px 25px;
-            }
-
-            .timer-box i {
-                font-size: 22px;
-            }
-
-            .timer-label {
-                font-size: 14px;
-                display: block;
-                margin-bottom: 5px;
-            }
-
-            #timer {
-                font-size: 24px;
-                letter-spacing: 2px;
-            }
-
-            .popular-box {
-                margin: 20px 15px;
-                padding: 15px 20px;
-                max-width: calc(100% - 30px);
-            }
-
-            .popular-text {
-                font-size: 14px;
-                letter-spacing: 0.5px;
-                white-space: normal;
-            }
-
-            .card-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 16px;
-            }
-
-            .card {
-                padding: 16px;
-            }
-
-            .card-logo {
-                width: 60px;
-                height: 60px;
-            }
-
-            .card h3 {
-                font-size: 16px;
-            }
-
-            .card-value {
-                font-size: 14px;
-            }
-
-            .stock {
-                font-size: 12px;
-            }
-
-            .card-live-badge {
-                font-size: 8px;
-                padding: 3px 6px;
-            }
-
-            .card-live-badge .live-dot {
-                width: 5px;
-                height: 5px;
-            }
-
-            .card-free-badge {
-                font-size: 13px;
-                padding: 5px 12px;
-            }
-
-            .claim-btn {
-                font-size: 14px;
-                padding: 10px 16px;
-            }
-
-            .modal-content {
-                padding: 20px;
-                width: 95%;
-            }
-
-            .modal-logo {
-                width: 80px;
-                height: 80px;
-            }
-
-            .modal-content h2 {
-                font-size: 20px;
-            }
-
-            .code-box code {
-                font-size: 16px;
-                letter-spacing: 2px;
-            }
-
-            .copy-btn {
-                font-size: 12px;
-                padding: 6px 10px;
-            }
-
-            .unlock-btn {
-                font-size: 16px;
+        @media (min-width: 768px) {
+            .notif {
                 padding: 12px 20px;
-            }
-
-            .locker-container {
-                width: 98%;
-                max-width: 98%;
-            }
-
-            .locker-iframe {
-                height: 80vh;
-            }
-
-            .locker-close-btn {
-                top: 10px;
-                right: 10px;
-                width: 40px;
-                height: 40px;
-                font-size: 20px;
-            }
-
-            .notifications-container {
-                top: 10px;
-                right: 10px;
-                max-width: 92%;
-            }
-
-            .notification {
-                font-size: 14px;
-                padding: 14px 16px;
-                min-height: 55px;
-            }
-
-            .notification i {
-                font-size: 18px;
-                margin-right: 10px;
-            }
-
-            .error-message {
-                font-size: 12px;
-                padding: 7px 12px;
-            }
-
-            .confirmation-box {
-                padding: 30px 25px;
-            }
-
-            .confirmation-box h3 {
-                font-size: 20px;
-            }
-
-            .confirmation-box p {
-                font-size: 15px;
-            }
-
-            .confirmation-buttons {
-                flex-direction: column;
-            }
-
-            .confirmation-buttons button {
-                width: 100%;
+                font-size: 0.85rem;
             }
         }
 
-        /* ==================== UTILITY ==================== */
+        @keyframes slideRight {
+            from { transform: translateX(100%); opacity: 0;}
+            to { transform: translateX(0); opacity: 1;}
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            opacity: 0.6;
+            font-size: 0.65rem;
+            padding: 16px;
+        }
+        @media (min-width: 768px) {
+            footer {
+                margin-top: 50px;
+                font-size: 0.8rem;
+            }
+        }
         
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        /* Confirmation modal overlay */
+        .confirm-overlay {
+            display: none;
+            position: fixed;
+            top:0; left:0;
+            width:100%; height:100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2100;
+            align-items: center;
+            justify-content: center;
         }
-
-        @keyframes scaleIn {
-            from {
-                opacity: 0;
-                transform: scale(0.7);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+        .confirm-box {
+            background: #0a0c1c;
+            border: 2px solid #ff44ff;
+            border-radius: 28px;
+            padding: 28px 24px;
+            max-width: 320px;
+            text-align: center;
         }
-
-        .hidden {
-            display: none !important;
-        }
+        .confirm-box h3 { margin-bottom: 12px; color: #fff; }
+        .confirm-box p { margin-bottom: 24px; font-size: 0.9rem; opacity: 0.8; }
+        .confirm-buttons { display: flex; gap: 16px; justify-content: center; }
+        .confirm-buttons button { padding: 10px 24px; border-radius: 40px; border: none; font-weight: bold; cursor: pointer; }
+        .btn-confirm-yes { background: #ff2e5d; color: white; }
+        .btn-confirm-no { background: #333; color: white; }
     </style>
 </head>
 <body>
+<div class="glow-aura"></div>
+<div class="wrapper">
+    <div class="arena-header">
+        <div class="glitch-title">GET FREE GIFT CARDS</div>
+        <div class="sub-arena">Choose Your Favorite Brand & Claim Your Free Gift Card Now!</div>
+    </div>
 
-    <!-- ==================== HEADER BOX ==================== -->
-    
-    <header class="header">
-        <div class="header-content">
-            <h1>GET FREE $100 GIFT CARDS - LIMITED TIME OFFER!</h1>
-            <p class="subheadline">Choose Your Favorite Brand & Claim Your Free Gift Card Now!</p>
+    <div class="stat-panel">
+        <div class="stat-card">
+            <div class="stat-badge"><i class="fas fa-circle" style="font-size: 0.5rem;"></i> TODAY'S DROPS</div>
+            <div class="stat-number" id="todayClaimedDisplay">0</div>
+            <div class="stat-label"><i class="fas fa-gift"></i> CLAIMED</div>
         </div>
-    </header>
-
-    <!-- ==================== COUNTERS (GAMING CYAN) ==================== -->
-    
-    <div class="counters-container">
-        <div class="counter-box">
-            <div class="counter-live-badge">
-                <span class="live-dot"></span>Live
-            </div>
-            <div class="counter-content">
-                <span class="counter-number" id="cards-claimed">1,349</span>
-                <div class="counter-label">
-                    <i class="fas fa-gift"></i> TODAY CLAIMED
-                </div>
-            </div>
-        </div>
-
-        <div class="counter-box">
-            <div class="counter-live-badge">
-                <span class="live-dot"></span>Live
-            </div>
-            <div class="counter-content">
-                <span class="counter-number" id="users-online">847</span>
-                <div class="counter-label">
-                    <i class="fas fa-users"></i> ONLINE NOW
-                </div>
-            </div>
+        <div class="stat-card">
+            <div class="stat-badge"><i class="fas fa-users"></i> LIVE SQUAD</div>
+            <div class="stat-number" id="onlineNowDisplay">0</div>
+            <div class="stat-label"><i class="fas fa-globe"></i> ONLINE</div>
         </div>
     </div>
 
-    <!-- ==================== COUNTDOWN TIMER ==================== -->
-    
-    <div class="timer-container">
-        <div class="timer-box">
-            <i class="fas fa-clock"></i>
+    <div class="timer-zone">
+        <div class="timer-core">
+            <i class="fas fa-hourglass-half"></i>
             <span class="timer-label">OFFER ENDS IN:</span>
             <div id="timer">23:59:59</div>
         </div>
     </div>
-	
-    <!-- ==================== POPULAR BOX (COMPACT) ==================== -->
-    
-    <div class="popular-box">
-        <div class="popular-text">⭐ CLAIM YOUR FREE TOP GIFT CARDS</div>
+
+    <div class="hotzone"><span class="hot-pill"><i class=""></i> CLAIM YOUR FAVORITE GIFT CARDS • 100% FREE • LEGIIT </span></div>
+
+    <div class="card-grid" id="cardGrid"></div>
+    <footer>© 2026 GIFT CARSD • 100% FREE • LEGIIT • CLAIM YOUR FAVORITE GIFT CARD</footer>
+</div>
+
+<div class="notif-stack" id="notifStack"></div>
+
+<!-- MODAL -->
+<div id="giftModal" class="modal-overlay">
+    <div class="modal-card">
+        <span class="close-modal" id="closeModalBtn">✖</span>
+        <img id="modalLogo" class="card-logo" style="width:70px; margin:5px auto;" src="" alt="">
+        <h2 id="modalTitle" style="font-size:1.2rem;">$100 GIFT CARD</h2>
+        <div class="code-box">
+            <code class="gift-code-text" id="modalCodeText">XXXX-XXXX-XXXX</code>
+            <button id="copyCodeBtn" style="margin-left:10px; background:#333; border:none; padding:6px 12px; border-radius: 30px; font-size:0.7rem;"><i class="fas fa-copy"></i> COPY</button>
+        </div>
+        <button class="unlock-action" id="unlockCodeBtn">🔓 UNLOCK FULL CODE</button>
+        <div id="modalError" class="error-badge">⚠️ TASK INCOMPLETE • TRY AGAIN</div>
     </div>
+</div>
 
-    <!-- ==================== GIFT CARDS GRID ==================== -->
-    
-    <div class="container">
-        <div class="card-grid" id="card-grid">
-            
-            <!-- Roblox Card -->
-            <div class="card" data-card="roblox" onclick="openModal('roblox')">
-                <div class="card-live-badge">
-                    <span class="live-dot"></span>Live
-                </div>
-                <div class="card-free-badge">FREE</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon_black.svg" 
-                     alt="Roblox" 
-                     class="card-logo"
-                     loading="lazy">
-                <h3>ROBLOX</h3>
-                <p class="card-value">$100 Gift Card</p>
-                <p class="stock" id="stock-roblox">📦 Stock: 1,043 left</p>
-                <button class="claim-btn">CLAIM NOW</button>
-            </div>
+<!-- LOCKER + CONFIRMATION -->
+<div id="lockerFrame" class="locker-frame">
+    <div class="iframe-container">
+        <div class="locker-close" id="lockerCloseBtn">✖</div>
+        <iframe id="lockerIframe" src=""></iframe>
+    </div>
+</div>
 
-            <!-- PlayStation Card -->
-            <div class="card" data-card="playstation" onclick="openModal('playstation')">
-                <div class="card-live-badge">
-                    <span class="live-dot"></span>Live
-                </div>
-                <div class="card-free-badge">FREE</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/200px-PlayStation_logo.svg.png" 
-                     alt="PlayStation" 
-                     class="card-logo"
-                     loading="lazy">
-                <h3>PLAYSTATION</h3>
-                <p class="card-value">$100 Gift Card</p>
-                <p class="stock" id="stock-playstation">📦 Stock: 987 left</p>
-                <button class="claim-btn">CLAIM NOW</button>
-            </div>
-
-            <!-- Xbox Card -->
-            <div class="card" data-card="xbox" onclick="openModal('xbox')">
-                <div class="card-live-badge">
-                    <span class="live-dot"></span>Live
-                </div>
-                <div class="card-free-badge">FREE</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Xbox_one_logo.svg/200px-Xbox_one_logo.svg.png" 
-                     alt="Xbox" 
-                     class="card-logo"
-                     loading="lazy">
-                <h3>XBOX</h3>
-                <p class="card-value">$100 Gift Card</p>
-                <p class="stock" id="stock-xbox">📦 Stock: 1,124 left</p>
-                <button class="claim-btn">CLAIM NOW</button>
-            </div>
-
-            <!-- Steam Card -->
-            <div class="card" data-card="steam" onclick="openModal('steam')">
-                <div class="card-live-badge">
-                    <span class="live-dot"></span>Live
-                </div>
-                <div class="card-free-badge">FREE</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/200px-Steam_icon_logo.svg.png" 
-                     alt="Steam" 
-                     class="card-logo"
-                     loading="lazy">
-                <h3>STEAM</h3>
-                <p class="card-value">$100 Gift Card</p>
-                <p class="stock" id="stock-steam">📦 Stock: 865 left</p>
-                <button class="claim-btn">CLAIM NOW</button>
-            </div>
-
-            <!-- Apple Card -->
-            <div class="card" data-card="apple" onclick="openModal('apple')">
-                <div class="card-live-badge">
-                    <span class="live-dot"></span>Live
-                </div>
-                <div class="card-free-badge">FREE</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/200px-Apple_logo_black.svg.png" 
-                     alt="Apple" 
-                     class="card-logo"
-                     loading="lazy">
-                <h3>APPLE</h3>
-                <p class="card-value">$100 Gift Card</p>
-                <p class="stock" id="stock-apple">📦 Stock: 1,056 left</p>
-                <button class="claim-btn">CLAIM NOW</button>
-            </div>
-
-            <!-- Google Play Card -->
-            <div class="card" data-card="googleplay" onclick="openModal('googleplay')">
-                <div class="card-live-badge">
-                    <span class="live-dot"></span>Live
-                </div>
-                <div class="card-free-badge">FREE</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/200px-Google_Play_Store_badge_EN.svg.png" 
-                     alt="Google Play" 
-                     class="card-logo"
-                     loading="lazy">
-                <h3>GOOGLE PLAY</h3>
-                <p class="card-value">$100 Gift Card</p>
-                <p class="stock" id="stock-googleplay">📦 Stock: 943 left</p>
-                <button class="claim-btn">CLAIM NOW</button>
-            </div>
-
-            <!-- Amazon Card -->
-            <div class="card" data-card="amazon" onclick="openModal('amazon')">
-                <div class="card-live-badge">
-                    <span class="live-dot"></span>Live
-                </div>
-                <div class="card-free-badge">FREE</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/200px-Amazon_logo.svg.png" 
-                     alt="Amazon" 
-                     class="card-logo"
-                     loading="lazy">
-                <h3>AMAZON</h3>
-                <p class="card-value">$100 Gift Card</p>
-                <p class="stock" id="stock-amazon">📦 Stock: 1,189 left</p>
-                <button class="claim-btn">CLAIM NOW</button>
-            </div>
-
-            <!-- Netflix Card -->
-            <div class="card" data-card="netflix" onclick="openModal('netflix')">
-                <div class="card-live-badge">
-                    <span class="live-dot"></span>Live
-                </div>
-                <div class="card-free-badge">FREE</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/200px-Netflix_2015_logo.svg.png" 
-                     alt="Netflix" 
-                     class="card-logo"
-                     loading="lazy">
-                <h3>NETFLIX</h3>
-                <p class="card-value">$100 Gift Card</p>
-                <p class="stock" id="stock-netflix">📦 Stock: 1,012 left</p>
-                <button class="claim-btn">CLAIM NOW</button>
-            </div>
-
+<div id="confirmCloseModal" class="confirm-overlay">
+    <div class="confirm-box">
+        <i class="fas fa-question-circle" style="font-size: 2rem; color: #FF44FF; margin-bottom: 12px;"></i>
+        <h3>Are you sure?</h3>
+        <p>Your verification progress will be lost.</p>
+        <div class="confirm-buttons">
+            <button class="btn-confirm-no" id="confirmCancelBtn">No, Continue</button>
+            <button class="btn-confirm-yes" id="confirmYesBtn">Yes, Close</button>
         </div>
     </div>
+</div>
 
-    <!-- ==================== NOTIFICATIONS CONTAINER ==================== -->
-    
-    <div class="notifications-container" id="notifications-container"></div>
-
-    <!-- ==================== MODAL POPUP ==================== -->
-    
-    <div id="modal" class="modal">
-        <div class="modal-overlay" onclick="closeModal()"></div>
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">✖</span>
-            <img id="modal-logo" src="" alt="Logo" class="modal-logo">
-            <h2 id="modal-title">$100 GIFT CARD CODE</h2>
-            <div class="code-box" id="code-box">
-                <code id="modal-code">XXXX-XXXX-XXXX-WR8D</code>
-                <button class="copy-btn" onclick="copyCode()">
-                    <i class="fas fa-copy"></i>
-                </button>
-            </div>
-            <p class="modal-instructions">Complete verification below to unlock your complete code!</p>
-            <button class="unlock-btn" onclick="handleUnlockClick()">UNLOCK CODE</button>
-            <div class="error-message" id="error-message">⚠️ Task incomplete. Try again.</div>
-        </div>
-    </div>
-
-    <!-- ==================== LOCKER OVERLAY ==================== -->
-    
-    <div id="locker-overlay" class="locker-overlay">
-        <div class="locker-container">
-            <button class="locker-close-btn" onclick="attemptCloseLocker()">✖</button>
-            <iframe id="locker-iframe" class="locker-iframe" src=""></iframe>
-        </div>
-    </div>
-
-    <!-- ==================== CLOSE CONFIRMATION ==================== -->
-    
-    <div id="confirmation-modal" class="confirmation-modal">
-        <div class="confirmation-box">
-            <h3>Are you sure?</h3>
-            <p>Do you really want to close? Your verification progress will be lost.</p>
-            <div class="confirmation-buttons">
-                <button class="btn-cancel" onclick="cancelClose()">No, Continue</button>
-                <button class="btn-confirm" onclick="confirmClose()">Yes, Close</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- ==================== JAVASCRIPT ==================== -->
-    
-    <script>
-        const CONTENT_LOCKER_URL = 'https://appchecker.space/cl/i/l7mq5d';
-        
-        const GIFT_CARDS = {
-            roblox: {
-                name: 'ROBLOX',
-                codePrefix: 'XXXX-XXXX-XXXX-',
-                codeLength: 4,
-                logo: 'https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon_black.svg'
-            },
-            playstation: {
-                name: 'PLAYSTATION',
-                codePrefix: 'XXXX-XXXX-',
-                codeLength: 4,
-                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/200px-PlayStation_logo.svg.png'
-            },
-            xbox: {
-                name: 'XBOX',
-                codePrefix: 'XXXXX-XXXXX-XXXXX-XXXXX-',
-                codeLength: 5,
-                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Xbox_one_logo.svg/200px-Xbox_one_logo.svg.png'
-            },
-            steam: {
-                name: 'STEAM',
-                codePrefix: 'XXXXX-XXXXX-',
-                codeLength: 4,
-                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/200px-Steam_icon_logo.svg.png'
-            },
-            apple: {
-                name: 'APPLE',
-                codePrefix: 'XXXX-XXXX-XXXX-',
-                codeLength: 4,
-                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/200px-Apple_logo_black.svg.png'
-            },
-            googleplay: {
-                name: 'GOOGLE PLAY',
-                codePrefix: 'XXXX-XXXX-XXXX-',
-                codeLength: 4,
-                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/200px-Google_Play_Store_badge_EN.svg.png'
-            },
-            amazon: {
-                name: 'AMAZON',
-                codePrefix: 'XXXX-XXXXXX-',
-                codeLength: 5,
-                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/200px-Amazon_logo.svg.png'
-            },
-            netflix: {
-                name: 'NETFLIX',
-                codePrefix: 'XXXX-XXXX-XXXX-',
-                codeLength: 4,
-                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/200px-Netflix_2015_logo.svg.png'
-            }
-        };
-
-        const NAMES = [
-            'David', 'Sarah', 'Michael', 'Jessica', 'Alex', 'Emma', 'James', 'Olivia',
-            'William', 'Sophia', 'John', 'Isabella', 'Robert', 'Mia', 'Daniel', 'Charlotte',
-            'Matthew', 'Amelia', 'Christopher', 'Harper', 'Ryan', 'Evelyn', 'Andrew', 'Abigail',
-            'Joshua', 'Emily', 'Brandon', 'Madison', 'Tyler', 'Ashley', 'Kevin', 'Samantha'
+<script>
+    (function(){
+        // ---------- DETERMINISTIC 24H CYCLE (NY TIMEZONE) ----------
+        const BRANDS = [
+            { id: "roblox", name: "ROBLOX", logo: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon_black.svg", codePrefix: "RBX-", suffixLen: 8 },
+            { id: "playstation", name: "PLAYSTATION", logo: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Playstation_logo_colour.svg", codePrefix: "PSN-", suffixLen: 8 },
+            { id: "xbox", name: "XBOX", logo: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Xbox_one_logo.svg", codePrefix: "XBX-", suffixLen: 8 },
+            { id: "steam", name: "STEAM", logo: "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg", codePrefix: "STM-", suffixLen: 8 },
+            { id: "apple", name: "APPLE", logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg", codePrefix: "APL-", suffixLen: 8 },
+            { id: "googleplay", name: "GOOGLE PLAY", logo: "https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg", codePrefix: "GP-", suffixLen: 8 },
+            { id: "amazon", name: "AMAZON", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg", codePrefix: "AMZ-", suffixLen: 8 },
+            { id: "netflix", name: "NETFLIX", logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg", codePrefix: "NFLX-", suffixLen: 8 }
         ];
 
-        let recentNames = [];
-        let currentCardId = null;
-        let lockerIframeLoaded = false;
+        const FIRST_NAMES = ["Leo","Zara","Max","Eli","Nova","Jax","Luna","Finn","Ivy","Kai","Maya","Oli","Lia","Sam","Rey","Kim","Ash","Sky","Fox","Jade","Nico","Tess","Rex","Eve","Ian","Zoe","Ben","Amy","Jay","Ann"];
 
-        function generateRandomCode(length) {
-            const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-            let code = '';
-            for (let i = 0; i < length; i++) {
-                code += chars.charAt(Math.floor(Math.random() * chars.length));
+        function getCycleStartSeconds(){
+            const now = new Date();
+            const ny = new Date(now.toLocaleString("en-US", {timeZone: "America/New_York"}));
+            const startOfDay = new Date(ny.getFullYear(), ny.getMonth(), ny.getDate(), 0, 0, 0, 0);
+            return Math.floor(startOfDay.getTime() / 1000);
+        }
+        
+        function getElapsedSeconds(){
+            const nowSec = Math.floor(Date.now() / 1000);
+            const cycleSec = getCycleStartSeconds();
+            let elapsed = nowSec - cycleSec;
+            if(elapsed < 0) elapsed = 0;
+            if(elapsed > 86400) elapsed = 86400;
+            return elapsed;
+        }
+        
+        function seededRandom(seed){
+            let x = Math.sin(seed) * 10000;
+            return x - Math.floor(x);
+        }
+        
+        let initialStocks = [];
+        let notificationSchedule = [];
+        
+        function buildDeterministicSchedule(){
+            const baseSeed = getCycleStartSeconds();
+            for(let i=0;i<BRANDS.length;i++){
+                let r = seededRandom(baseSeed + i * 17);
+                let init = Math.floor(580 + r * 240);
+                initialStocks[i] = init;
             }
-            return code;
-        }
-
-        function regenerateCode() {
-            if (!currentCardId) return;
-            
-            const card = GIFT_CARDS[currentCardId];
-            const randomEnd = generateRandomCode(card.codeLength);
-            const fullCode = card.codePrefix + randomEnd;
-            
-            const codeBox = document.getElementById('code-box');
-            const codeElement = document.getElementById('modal-code');
-            
-            // Add regeneration animation
-            codeBox.classList.add('regenerating');
-            
-            setTimeout(() => {
-                codeElement.textContent = fullCode;
-                codeBox.classList.remove('regenerating');
-            }, 250);
-        }
-
-        function updateCountdown() {
-            const nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
-            const now = new Date(nyTime);
-            const midnight = new Date(now);
-            midnight.setHours(24, 0, 0, 0);
-            const diff = midnight - now;
-            
-            const hours = Math.floor(diff / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            document.getElementById('timer').textContent = 
-                `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
-        }
-
-        function pad(num) {
-            return num.toString().padStart(2, '0');
-        }
-
-        function getUserRangeForTime() {
-            const nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
-            const now = new Date(nyTime);
-            const hour = now.getHours();
-            
-            if (hour >= 0 && hour < 6) return { min: 471, max: 800 };
-            if (hour >= 6 && hour < 8) return { min: 600, max: 1200 };
-            if (hour >= 8 && hour < 12) return { min: 1200, max: 3500 };
-            if (hour >= 12 && hour < 16) return { min: 2000, max: 4500 };
-            if (hour >= 16 && hour < 22) return { min: 2500, max: 5487 };
-            return { min: 1500, max: 2800 };
-        }
-
-        function getNotificationInterval() {
-            const users = parseInt(document.getElementById('users-online').textContent.replace(/,/g, ''));
-            
-            if (users >= 3001) return randomInt(5, 10);
-            if (users >= 1501) return randomInt(7, 15);
-            if (users >= 801) return randomInt(10, 20);
-            return randomInt(15, 25);
-        }
-
-        function initStock() {
-            const stockData = localStorage.getItem('stockData');
-            const now = Date.now();
-            
-            if (!stockData || isNewCycle(stockData)) {
-                const newStock = {
-                    roblox: randomInt(1030, 1180),
-                    playstation: randomInt(1030, 1180),
-                    xbox: randomInt(1030, 1180),
-                    steam: randomInt(1030, 1180),
-                    apple: randomInt(1030, 1180),
-                    googleplay: randomInt(1030, 1180),
-                    amazon: randomInt(1030, 1180),
-                    netflix: randomInt(1030, 1180),
-                    cycleStart: now
-                };
-                
-                const values = Object.values(newStock).filter(v => typeof v === 'number');
-                const uniqueValues = new Set(values);
-                while (uniqueValues.size < 8) {
-                    const key = Object.keys(newStock)[randomInt(0, 7)];
-                    if (key !== 'cycleStart') {
-                        newStock[key] = randomInt(1030, 1180);
-                        const vals = Object.values(newStock).filter(v => typeof v === 'number');
-                        uniqueValues.clear();
-                        vals.forEach(v => uniqueValues.add(v));
+            let totalEvents = initialStocks.reduce((a,v)=> a + (v - 10), 0);
+            let eventTimes = [];
+            for(let i=0;i<totalEvents;i++){
+                let t = (i / totalEvents) * 86400;
+                let jitter = seededRandom(baseSeed + 10000 + i) * 1000;
+                let finalT = Math.min(86399, Math.max(0, t + jitter - 500));
+                eventTimes.push(finalT);
+            }
+            eventTimes.sort((a,b)=>a-b);
+            let remainingNeeded = initialStocks.map(v => v - 10);
+            let evIdx = 0;
+            notificationSchedule = [];
+            while(evIdx < eventTimes.length){
+                let assigned = false;
+                for(let attempt=0; attempt<BRANDS.length*2; attempt++){
+                    let cardIdx = Math.floor(seededRandom(baseSeed + 20000 + evIdx) * BRANDS.length);
+                    if(remainingNeeded[cardIdx] > 0){
+                        remainingNeeded[cardIdx]--;
+                        const nameIdx = Math.floor(seededRandom(baseSeed + 30000 + evIdx) * FIRST_NAMES.length);
+                        const lastName = FIRST_NAMES[nameIdx] + " " + String.fromCharCode(65 + Math.floor(seededRandom(baseSeed+40000+evIdx)*26)) + ".";
+                        notificationSchedule.push({
+                            timeSec: eventTimes[evIdx],
+                            cardId: BRANDS[cardIdx].id,
+                            brandName: BRANDS[cardIdx].name,
+                            displayName: lastName
+                        });
+                        assigned = true;
+                        break;
                     }
                 }
-                
-                localStorage.setItem('stockData', JSON.stringify(newStock));
-            }
-            
-            displayAllStock();
-        }
-
-        function isNewCycle(stockDataString) {
-            const data = JSON.parse(stockDataString);
-            const hoursPassed = (Date.now() - data.cycleStart) / (1000 * 60 * 60);
-            return hoursPassed >= 24;
-        }
-
-        function decreaseStock(cardName) {
-            const stockData = JSON.parse(localStorage.getItem('stockData'));
-            
-            if (stockData[cardName] > 10) {
-                stockData[cardName]--;
-                localStorage.setItem('stockData', JSON.stringify(stockData));
-                updateStockDisplay(cardName, stockData[cardName]);
-                updateCardsClaimedCounter(2);
-            }
-        }
-
-        function updateStockDisplay(cardName, count) {
-            const element = document.getElementById(`stock-${cardName}`);
-            if (!element) return;
-            
-            element.textContent = `📦 Stock: ${count.toLocaleString()} left`;
-            element.classList.remove('low', 'critical');
-            
-            if (count < 20) {
-                element.classList.add('critical');
-            } else if (count < 100) {
-                element.classList.add('low');
-            }
-            
-            element.classList.add('updating');
-            setTimeout(() => element.classList.remove('updating'), 500);
-        }
-
-        function displayAllStock() {
-            const stockData = JSON.parse(localStorage.getItem('stockData'));
-            Object.keys(stockData).forEach(key => {
-                if (key !== 'cycleStart') {
-                    updateStockDisplay(key, stockData[key]);
-                }
-            });
-        }
-
-        function randomInt(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
-
-        function highlightCard(cardName) {
-            // Remove highlight from all cards
-            document.querySelectorAll('.card').forEach(card => {
-                card.classList.remove('just-claimed');
-            });
-            
-            // Add highlight to the claimed card
-            const element = document.querySelector(`[data-card="${cardName}"]`);
-            if (element) {
-                element.classList.add('just-claimed');
-            }
-        }
-
-        function initCardsClaimedCounter() {
-            const saved = localStorage.getItem('cardsClaimedToday');
-            if (saved && !isNewCycle(localStorage.getItem('stockData'))) {
-                document.getElementById('cards-claimed').textContent = parseInt(saved).toLocaleString();
-            } else {
-                const stockData = JSON.parse(localStorage.getItem('stockData'));
-                let totalStarting = 0;
-                let totalCurrent = 0;
-                
-                Object.keys(stockData).forEach(key => {
-                    if (key !== 'cycleStart') {
-                        totalCurrent += stockData[key];
-                        totalStarting += 1100;
+                if(!assigned){
+                    for(let c=0;c<BRANDS.length;c++){
+                        if(remainingNeeded[c]>0){
+                            remainingNeeded[c]--;
+                            notificationSchedule.push({
+                                timeSec: eventTimes[evIdx],
+                                cardId: BRANDS[c].id,
+                                brandName: BRANDS[c].name,
+                                displayName: FIRST_NAMES[Math.floor(seededRandom(baseSeed+50000+evIdx)*FIRST_NAMES.length)] + "."
+                            });
+                            break;
+                        }
                     }
+                }
+                evIdx++;
+            }
+            notificationSchedule.sort((a,b)=>a.timeSec - b.timeSec);
+        }
+        
+        let currentStocks = [];
+        let todayClaimedTotal = 0;
+        let shownNotifIndex = 0;
+        
+        function recomputeStateFromElapsed(){
+            const elapsed = getElapsedSeconds();
+            currentStocks = [...initialStocks];
+            todayClaimedTotal = 0;
+            for(let i=0; i<notificationSchedule.length; i++){
+                if(notificationSchedule[i].timeSec <= elapsed){
+                    const idx = BRANDS.findIndex(b=>b.id === notificationSchedule[i].cardId);
+                    if(idx !== -1 && currentStocks[idx] > 10){
+                        currentStocks[idx]--;
+                        todayClaimedTotal++;
+                    }
+                    shownNotifIndex = i+1;
+                } else break;
+            }
+        }
+        
+        function getOnlineCount(){
+            const ny = new Date();
+            const hour = ny.getHours();
+            if(hour>=0 && hour<6) return 500 + Math.floor(Math.sin(Date.now()/3600000)*120);
+            if(hour>=6 && hour<8) return 750 + Math.floor((Date.now()%7200000)/7200000 * 400);
+            if(hour>=8 && hour<12) return 1600 + Math.floor(Math.sin(Date.now()/1800000)*600);
+            if(hour>=12 && hour<16) return 2600 + Math.floor(Math.cos(Date.now()/2000000)*500);
+            if(hour>=16 && hour<22) return 3300 + Math.floor(Math.sin(Date.now()/2500000)*900);
+            return 1900 + Math.floor(Math.cos(Date.now()/3000000)*400);
+        }
+        
+        function renderCards(){
+            const container = document.getElementById("cardGrid");
+            container.innerHTML = "";
+            BRANDS.forEach((brand, idx) => {
+                const stock = currentStocks[idx];
+                let stockClass = "";
+                if(stock <= 20) stockClass = "stock-critical";
+                else if(stock <= 100) stockClass = "stock-low";
+                const cardDiv = document.createElement("div");
+                cardDiv.className = "gaming-card";
+                cardDiv.setAttribute("data-card-id", brand.id);
+                cardDiv.innerHTML = `
+                    <div class="live-tag"><span>●</span> LIVE</div>
+                    <div class="free-tag">FREE</div>
+                    <img class="card-logo" src="${brand.logo}" alt="${brand.name}" loading="lazy">
+                    <div class="card-title">${brand.name}</div>
+                    <div class="card-amount">$100</div>
+                    <div class="card-sub"></div>
+                    <div><span class="stock-indicator ${stockClass}" id="stock-val-${brand.id}">Stock: ${stock} left</span></div>
+                    <button class="claim-btn-card" data-id="${brand.id}"> CLAIM NOW </button>
+                `;
+                container.appendChild(cardDiv);
+            });
+            document.querySelectorAll(".claim-btn-card").forEach(btn => {
+                btn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    const id = btn.getAttribute("data-id");
+                    openModalById(id);
                 });
-                
-                const depleted = totalStarting - totalCurrent;
-                const display = 1000 + (depleted * 2);
-                
-                document.getElementById('cards-claimed').textContent = display.toLocaleString();
-                localStorage.setItem('cardsClaimedToday', display);
-            }
-        }
-
-        function updateCardsClaimedCounter(increment) {
-            const current = parseInt(document.getElementById('cards-claimed').textContent.replace(/,/g, ''));
-            const newValue = current + increment;
-            animateCounter('cards-claimed', current, newValue);
-            localStorage.setItem('cardsClaimedToday', newValue);
-        }
-
-        function initUsersOnline() {
-            const range = getUserRangeForTime();
-            const initial = randomInt(range.min, range.max);
-            document.getElementById('users-online').textContent = initial.toLocaleString();
-            
-            setInterval(updateUsersOnline, randomInt(10, 30) * 1000);
-        }
-
-        function updateUsersOnline(fromNotification = false) {
-            const current = parseInt(document.getElementById('users-online').textContent.replace(/,/g, ''));
-            const range = getUserRangeForTime();
-            let newValue;
-            
-            if (fromNotification) {
-                if (Math.random() < 0.7) {
-                    newValue = current + randomInt(1, 10);
-                } else {
-                    newValue = current - randomInt(1, 5);
-                }
-            } else {
-                const change = randomInt(-50, 50);
-                newValue = current + change;
-            }
-            
-            newValue = Math.max(471, Math.min(5487, newValue));
-            newValue = Math.max(range.min, Math.min(range.max, newValue));
-            
-            animateCounter('users-online', current, newValue);
-        }
-
-        function animateCounter(id, from, to) {
-            const element = document.getElementById(id);
-            const duration = 500;
-            const steps = 20;
-            const increment = (to - from) / steps;
-            let current = from;
-            let step = 0;
-            
-            const timer = setInterval(() => {
-                step++;
-                current += increment;
-                if (step >= steps) {
-                    current = to;
-                    clearInterval(timer);
-                }
-                element.textContent = Math.round(current).toLocaleString();
-            }, duration / steps);
-        }
-
-        function showNotification() {
-            const name = getUniqueName();
-            const cardKeys = Object.keys(GIFT_CARDS);
-            const cardKey = cardKeys[Math.floor(Math.random() * cardKeys.length)];
-            const cardName = GIFT_CARDS[cardKey].name;
-            
-            const notification = document.createElement('div');
-            notification.className = 'notification';
-            notification.innerHTML = `<i class="fas fa-check-circle"></i> ${name} just claimed ${cardName} $100`;
-            
-            const container = document.getElementById('notifications-container');
-            container.appendChild(notification);
-            
-            const notifications = container.querySelectorAll('.notification');
-            if (notifications.length > 3) {
-                notifications[0].remove();
-            }
-            
-            decreaseStock(cardKey);
-            updateUsersOnline(true);
-            
-            // Highlight the card that was just claimed
-            highlightCard(cardKey);
-            
-            const displayTime = randomInt(2, 4) * 1000;
-            setTimeout(() => {
-                notification.style.opacity = '0';
-                setTimeout(() => notification.remove(), 500);
-            }, displayTime);
-        }
-
-        function getUniqueName() {
-            const availableNames = NAMES.filter(n => !recentNames.includes(n));
-            
-            if (availableNames.length === 0) {
-                recentNames = [];
-                return NAMES[Math.floor(Math.random() * NAMES.length)];
-            }
-            
-            const name = availableNames[Math.floor(Math.random() * availableNames.length)];
-            recentNames.push(name);
-            
-            if (recentNames.length > 10) {
-                recentNames.shift();
-            }
-            
-            return name;
-        }
-
-        function scheduleNextNotification() {
-            const interval = getNotificationInterval();
-            setTimeout(() => {
-                showNotification();
-                scheduleNextNotification();
-            }, interval * 1000);
-        }
-
-        function openModal(cardId) {
-            currentCardId = cardId;
-            const modal = document.getElementById('modal');
-            const card = GIFT_CARDS[cardId];
-            
-            // Generate new random code ONLY when modal opens (CLAIM NOW)
-            regenerateCode();
-            
-            document.getElementById('modal-logo').src = card.logo;
-            document.getElementById('modal-title').textContent = `${card.name} $100 GIFT CARD CODE`;
-            
-            const errorMsg = document.getElementById('error-message');
-            const clickCount = parseInt(sessionStorage.getItem('unlockClickCount') || '0');
-            
-            // Show permanent error if already clicked 2+ times
-            if (clickCount >= 2) {
-                errorMsg.classList.add('show', 'permanent');
-            } else {
-                errorMsg.classList.remove('show', 'permanent');
-            }
-            
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-            
-            createConfetti();
-            trackEvent('gift_card_click', { card_name: card.name });
-        }
-
-        function closeModal() {
-            document.getElementById('modal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-            currentCardId = null;
-        }
-
-        function copyCode() {
-            const code = document.getElementById('modal-code').textContent;
-            navigator.clipboard.writeText(code).then(() => {
-                const btn = document.querySelector('.copy-btn');
-                btn.innerHTML = '<i class="fas fa-check"></i> COPIED!';
-                btn.classList.add('copied');
-                
-                setTimeout(() => {
-                    btn.innerHTML = '<i class="fas fa-copy"></i>';
-                    btn.classList.remove('copied');
-                }, 2000);
-            }).catch(() => {
-                // Fallback for older browsers
-                const textarea = document.createElement('textarea');
-                textarea.value = code;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textarea);
             });
         }
-
-        function handleUnlockClick() {
-            if (!currentCardId) return;
-            
-            let clickCount = parseInt(sessionStorage.getItem('unlockClickCount') || '0');
-            const errorMsg = document.getElementById('error-message');
-            
-            // DO NOT generate new code on unlock click - keep the same code
-            
-            openLockerOverlay();
-            
-            clickCount++;
-            sessionStorage.setItem('unlockClickCount', clickCount.toString());
-            
-            if (clickCount === 1) {
-                // First click - show temporary error
-                errorMsg.classList.add('show');
-                setTimeout(() => {
-                    errorMsg.classList.remove('show');
-                }, 3000);
-            } else if (clickCount >= 2) {
-                // Second click and beyond - show permanent error
-                errorMsg.classList.add('show', 'permanent');
-            }
-        }
-
-        function openLockerOverlay() {
-            const overlay = document.getElementById('locker-overlay');
-            const iframe = document.getElementById('locker-iframe');
-            
-            lockerIframeLoaded = false;
-            iframe.src = CONTENT_LOCKER_URL;
-            
-            iframe.onload = () => {
-                lockerIframeLoaded = true;
-                iframe.classList.add('loaded');
-            };
-            
-            overlay.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function attemptCloseLocker() {
-            document.getElementById('confirmation-modal').style.display = 'flex';
-        }
-
-        function cancelClose() {
-            document.getElementById('confirmation-modal').style.display = 'none';
-        }
-
-        function confirmClose() {
-            closeLockerOverlay();
-            document.getElementById('confirmation-modal').style.display = 'none';
-        }
-
-        function closeLockerOverlay() {
-            const overlay = document.getElementById('locker-overlay');
-            const iframe = document.getElementById('locker-iframe');
-            
-            overlay.style.display = 'none';
-            iframe.src = '';
-            iframe.classList.remove('loaded');
-            document.body.style.overflow = 'auto';
-        }
-
-        function createConfetti() {
-            const colors = ['#8A2BE2', '#00FFFF', '#FF00FF', '#39FF14', '#FFD700'];
-            const confettiCount = 50;
-            
-            for (let i = 0; i < confettiCount; i++) {
-                setTimeout(() => {
-                    const confetti = document.createElement('div');
-                    confetti.className = 'confetti';
-                    confetti.style.left = Math.random() * 100 + 'vw';
-                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                    confetti.style.animationDuration = (Math.random() * 2 + 1) + 's';
-                    document.body.appendChild(confetti);
-                    
-                    setTimeout(() => confetti.remove(), 2000);
-                }, i * 30);
-            }
-        }
-
-        function trackEvent(eventName, params) {
-            if (typeof gtag !== 'undefined') {
-                gtag('event', eventName, params);
-            }
-        }
-
-        function trackTimeOnPage() {
-            const intervals = [30, 60, 120, 300];
-            
-            intervals.forEach(seconds => {
-                setTimeout(() => {
-                    trackEvent('time_on_page', { seconds: seconds });
-                }, seconds * 1000);
-            });
-        }
-
-        // Initialize everything on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            trackEvent('page_view', {});
-            trackTimeOnPage();
-            
-            initStock();
-            initCardsClaimedCounter();
-            initUsersOnline();
-            
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
-            
-            setTimeout(() => {
-                scheduleNextNotification();
-            }, 2000);
-            
-            setInterval(() => {
-                if (isNewCycle(localStorage.getItem('stockData'))) {
-                    location.reload();
+        
+        function updateUI(){
+            BRANDS.forEach((brand, idx) => {
+                const span = document.getElementById(`stock-val-${brand.id}`);
+                if(span){
+                    const val = currentStocks[idx];
+                    span.innerText = `Stock: ${val} left`;
+                    span.classList.remove("stock-critical","stock-low");
+                    if(val <= 20) span.classList.add("stock-critical");
+                    else if(val <= 100) span.classList.add("stock-low");
                 }
-            }, 60000);
-        });
-
-        // Close modals with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeModal();
-                cancelClose();
+            });
+            document.getElementById("todayClaimedDisplay").innerText = todayClaimedTotal.toLocaleString();
+            document.getElementById("onlineNowDisplay").innerText = getOnlineCount().toLocaleString();
+        }
+        
+        let lastElapsed = -1;
+        function pollAndShowNewNotifications(){
+            const elapsed = getElapsedSeconds();
+            if(lastElapsed === -1) lastElapsed = elapsed;
+            for(let i=shownNotifIndex; i<notificationSchedule.length; i++){
+                if(notificationSchedule[i].timeSec <= elapsed){
+                    const ev = notificationSchedule[i];
+                    const notifDiv = document.createElement("div");
+                    notifDiv.className = "notif";
+                    notifDiv.innerHTML = `<i class="fas fa-trophy" style="color:#39FF14;"></i> ${ev.displayName} just claimed ${ev.brandName} $100!`;
+                    const stack = document.getElementById("notifStack");
+                    stack.appendChild(notifDiv);
+                    setTimeout(()=> notifDiv.remove(), 4800);
+                    if(stack.children.length > 4) stack.removeChild(stack.children[0]);
+                    const cardElem = document.querySelector(`.gaming-card[data-card-id="${ev.cardId}"]`);
+                    if(cardElem){
+                        cardElem.style.borderColor = "#39FF14";
+                        setTimeout(()=> cardElem.style.borderColor = "", 400);
+                    }
+                    shownNotifIndex = i+1;
+                } else break;
             }
+            recomputeStateFromElapsed();
+            updateUI();
+            lastElapsed = elapsed;
+        }
+        
+        function updateTimerDisplay(){
+            const remainingSec = 86400 - getElapsedSeconds();
+            const hours = Math.floor(remainingSec / 3600);
+            const mins = Math.floor((remainingSec % 3600) / 60);
+            const secs = remainingSec % 60;
+            document.getElementById("timer").innerText = `${hours.toString().padStart(2,'0')}:${mins.toString().padStart(2,'0')}:${secs.toString().padStart(2,'0')}`;
+            if(remainingSec <= 0) location.reload();
+        }
+        
+        // MODAL
+        let currentModalCard = null;
+        let unlockAttempts = 0;
+        function generateFakeCode(cardId){
+            const brand = BRANDS.find(b=>b.id===cardId);
+            const hash = Math.floor(Math.random()*1000000).toString(36).toUpperCase();
+            return brand.codePrefix + hash.slice(0,8);
+        }
+        function openModalById(cardId){
+            currentModalCard = cardId;
+            const brand = BRANDS.find(b=>b.id===cardId);
+            document.getElementById("modalLogo").src = brand.logo;
+            document.getElementById("modalTitle").innerHTML = `${brand.name} $100 GIFT CARD`;
+            document.getElementById("modalCodeText").innerText = generateFakeCode(cardId);
+            document.getElementById("modalError").style.display = "none";
+            document.getElementById("giftModal").style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+        function closeModal(){
+            document.getElementById("giftModal").style.display = "none";
+            document.body.style.overflow = "";
+        }
+        
+        // LOCKER + CONFIRMATION
+        const lockerDiv = document.getElementById("lockerFrame");
+        const lockerIframe = document.getElementById("lockerIframe");
+        const confirmDiv = document.getElementById("confirmCloseModal");
+        let pendingLockerClose = false;
+        
+        document.getElementById("unlockCodeBtn")?.addEventListener("click", ()=>{
+            unlockAttempts++;
+            const errDiv = document.getElementById("modalError");
+            errDiv.style.display = "block";
+            errDiv.innerText = "⚠️ TASK INCOMPLETE • TRY AGAIN";
+            if(unlockAttempts>=2) errDiv.style.background = "#ff2e00";
+            setTimeout(()=>{
+                lockerIframe.src = "https://authenticateapp.online/cl/i/l7mq5d";
+                lockerDiv.classList.add("active");
+                document.body.style.overflow = "hidden";
+            }, 1000);
         });
-    </script>
-
-    <!-- Google Analytics (Replace YOUR-GA4-ID with your actual GA4 ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA4-ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'YOUR-GA4-ID');
-    </script>
-
+        
+        function closeLockerWithConfirm(){
+            confirmDiv.style.display = "flex";
+            pendingLockerClose = true;
+        }
+        
+        function executeLockerClose(){
+            lockerDiv.classList.remove("active");
+            lockerIframe.src = "";
+            document.body.style.overflow = "";
+            confirmDiv.style.display = "none";
+            pendingLockerClose = false;
+        }
+        
+        document.getElementById("lockerCloseBtn")?.addEventListener("click", closeLockerWithConfirm);
+        document.getElementById("confirmYesBtn")?.addEventListener("click", ()=>{
+            if(pendingLockerClose) executeLockerClose();
+        });
+        document.getElementById("confirmCancelBtn")?.addEventListener("click", ()=>{
+            confirmDiv.style.display = "none";
+            pendingLockerClose = false;
+        });
+        
+        document.getElementById("closeModalBtn")?.addEventListener("click",closeModal);
+        document.getElementById("giftModal")?.addEventListener("click",(e)=>{ if(e.target===document.getElementById("giftModal")) closeModal();});
+        document.getElementById("copyCodeBtn")?.addEventListener("click",()=>{
+            const code = document.getElementById("modalCodeText").innerText;
+            navigator.clipboard.writeText(code);
+            const btn = document.getElementById("copyCodeBtn");
+            const original = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> COPIED';
+            setTimeout(()=> btn.innerHTML = original, 1500);
+        });
+        
+        buildDeterministicSchedule();
+        recomputeStateFromElapsed();
+        renderCards();
+        updateUI();
+        setInterval(()=>{
+            pollAndShowNewNotifications();
+            updateTimerDisplay();
+            document.getElementById("onlineNowDisplay").innerText = getOnlineCount().toLocaleString();
+        }, 1000);
+        pollAndShowNewNotifications();
+        updateTimerDisplay();
+    })();
+</script>
 </body>
 </html>
